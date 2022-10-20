@@ -14,5 +14,6 @@
         <!-- Customize your theme here. -->
         <item name="android:windowBackground">@color/Purpura</item>
         <item name="android:buttonTint">@style/colorBoton</item>
+
     </style>
 </resources>
