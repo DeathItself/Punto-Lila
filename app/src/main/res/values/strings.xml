@@ -12,4 +12,8 @@
     <string name="nombre_completo">Nombre Completo</string>
     <string name="RepeatPassword">Repetir Contraseña</string>
     <string name="insertar_dni">Insertar DNI</string>
+    <string name="chat">Escribir</string>
+    <string name="EventTitle">Eventos</string>
+    <string name="ButtonList">Lista</string>
+    <string name="ButtonMap">Mapa</string>
 </resources>
