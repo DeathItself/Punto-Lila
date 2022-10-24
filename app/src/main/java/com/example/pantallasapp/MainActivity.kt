@@ -26,10 +26,11 @@ class MainActivity : AppCompatActivity() {
         // Initialize Firebase Auth
         auth = Firebase.auth
 
-        bin.InicioSesion.setOnClickListener {
-            intent = Intent( this, Login::class.java )
+        bin.Registrarse.setOnClickListener {
+            intent = Intent( this, Registro::class.java )
             startActivity(intent)
         }
+
     }
 
     public override fun onStart() {

@@ -24,4 +24,6 @@
     <style name="botonEvento">
         <item name="android:backgroundTint">@color/Morado</item>
     </style>
+
+    <style name="TextMultilinia"></style>
 </resources>
