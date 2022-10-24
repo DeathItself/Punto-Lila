@@ -5,7 +5,8 @@
     android:id="@+id/frameLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PantallaRegistro">
+    android:background="@color/Purpura"
+    android:backgroundTint="@color/Purpura">
 
 
     <com.google.android.material.textfield.TextInputEditText
@@ -86,6 +87,7 @@
         android:hint="@string/insertar_dni"
         android:inputType="textPassword"
         android:text=""
+        app:circularflow_radiusInDP="50dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.489"
@@ -131,22 +133,25 @@
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.298"
+        app:layout_constraintHorizontal_bias="0.437"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.755" />
+        app:layout_constraintVertical_bias="0.762" />
 
     <Button
         android:id="@+id/botonRegistro"
         android:layout_width="185dp"
         android:layout_height="56dp"
+        android:backgroundTint="@color/Morado"
         android:text="Registrarse"
         android:textColor="@color/black"
-        app:cornerRadius="22dp"
+        app:circularflow_defaultRadius="50dp"
+        app:circularflow_radiusInDP="50dp"
+        app:cornerRadius="50dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.909" />
+        app:layout_constraintVertical_bias="0.911" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
