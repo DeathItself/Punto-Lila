@@ -53,9 +53,9 @@ class Registro : AppCompatActivity() {
 
         user?.let {
             val nom = user.displayName ?:run{"sense nom"}
-            bin.Nombre.setText("Usuari email: ${user.email}\n$nom")
+            bin.Nombre.setHint("Usuari email: ${user.email}\n$nom")
         } ?: run {
-            bin.Nombre.setText("Usuari: no assignat")
+            bin.Nombre.setHint("Usuari: no assignat")
         }
     }
 

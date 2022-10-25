@@ -50,10 +50,10 @@ class MainActivity : AppCompatActivity() {
         val user = auth.currentUser
 
         user?.let {
-            val nom = user.displayName ?:run{"sense nom"}
-            bin.Registrarse.setText("Usuari email: ${user.email}\n$nom")
+            val nom = {"sense nom"}
+            bin.Registrarse.setHint("Usuari email: ${user.email}\n$nom")
         } ?: run {
-            bin.Registrarse.setText("Usuari: no assignat")
+            bin.Registrarse.setHint("Usuari: no assignat")
         }
     }
 }
