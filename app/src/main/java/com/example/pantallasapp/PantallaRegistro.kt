@@ -34,7 +34,7 @@ class PantallaRegistro : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_pantalla_registro, container, false)
+        return inflater.inflate(R.layout.activity_registro, container, false)
     }
 
     companion object {

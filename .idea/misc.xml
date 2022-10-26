@@ -3,19 +3,15 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/soufi/AndroidStudioProjects/PantallasApp/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.3055" />
-        <entry key="..\:/Users/soufi/AndroidStudioProjects/PantallasApp/app/src/main/res/drawable/ic_arrow_left_white.xml" value="0.3055" />
-        <entry key="..\:/Users/soufi/AndroidStudioProjects/PantallasApp/app/src/main/res/drawable/ic_dashboard_black_24dp.xml" value="0.3055" />
-        <entry key="..\:/Users/soufi/AndroidStudioProjects/PantallasApp/app/src/main/res/drawable/ic_home_black_24dp.xml" value="0.3055" />
-        <entry key="..\:/Users/soufi/AndroidStudioProjects/PantallasApp/app/src/main/res/drawable/ic_launcher_background.xml" value="0.3055" />
-        <entry key="..\:/Users/soufi/AndroidStudioProjects/PantallasApp/app/src/main/res/drawable/ic_notifications_black_24dp.xml" value="0.3055" />
-        <entry key="..\:/Users/soufi/AndroidStudioProjects/PantallasApp/app/src/main/res/layout/activity_main.xml" value="0.25" />
-        <entry key="..\:/Users/soufi/AndroidStudioProjects/PantallasApp/app/src/main/res/layout/fragment_chat.xml" value="0.358695652173913" />
-        <entry key="..\:/Users/soufi/AndroidStudioProjects/PantallasApp/app/src/main/res/layout/fragment_conciertos.xml" value="0.35260416666666666" />
-        <entry key="..\:/Users/soufi/AndroidStudioProjects/PantallasApp/app/src/main/res/layout/fragment_home.xml" value="0.358695652173913" />
-        <entry key="..\:/Users/soufi/AndroidStudioProjects/PantallasApp/app/src/main/res/layout/fragment_pantalla_registro.xml" value="0.33" />
-        <entry key="..\:/Users/soufi/AndroidStudioProjects/PantallasApp/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1215" />
-        <entry key="..\:/Users/soufi/AndroidStudioProjects/punt_lila/app/src/main/res/layout/fragment_conciertos.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/Alfred/AndroidStudioProjects/punt_lila/app/src/main/res/layout/activity_firestore_prueba.xml" value="0.1" />
+        <entry key="..\:/Users/Alfred/AndroidStudioProjects/punt_lila/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/Users/Alfred/AndroidStudioProjects/punt_lila/app/src/main/res/layout/activity_registro.xml" value="0.264" />
+        <entry key="..\:/Users/Alfred/AndroidStudioProjects/punt_lila/app/src/main/res/layout/fragment_conciertos.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/Alfred/AndroidStudioProjects/punt_lila/app/src/main/res/layout/fragment_dashboard.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/Alfred/AndroidStudioProjects/punt_lila/app/src/main/res/layout/fragment_home.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/Alfred/AndroidStudioProjects/punt_lila/app/src/main/res/layout/fragment_notifications.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/Alfred/AndroidStudioProjects/punt_lila/app/src/main/res/layout/fragment_pantalla_registro.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/Alfred/AndroidStudioProjects/punt_lila/app/src/main/res/menu/bottom_nav_menu.xml" value="0.25416666666666665" />
       </map>
     </option>
   </component>
