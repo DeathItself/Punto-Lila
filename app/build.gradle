@@ -34,7 +34,11 @@ android {
         viewBinding true
     }
     namespace 'com.example.pantallasapp'
+    buildFeatures {
+        viewBinding = true
+    }
 }
+
 
 dependencies {
 

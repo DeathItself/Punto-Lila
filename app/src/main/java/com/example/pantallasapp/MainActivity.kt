@@ -3,7 +3,12 @@ package com.example.pantallasapp
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.example.pantallasapp.databinding.ActivityMainBinding
+import com.example.pantallasapp.ui.ReciclerView.ListAdapter
+import com.example.pantallasapp.ui.ReciclerView.Menu
+import com.example.pantallasapp.ui.ReciclerView.ReciclerInfo
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.ktx.auth
@@ -25,12 +30,21 @@ class MainActivity : AppCompatActivity() {
 
         // Initialize Firebase Auth
         auth = Firebase.auth
+        initRecyclerView()
 
         bin.Registrarse.setOnClickListener {
             intent = Intent( this, Registro::class.java )
             startActivity(intent)
+
         }
 
+
+    }
+
+    private fun initRecyclerView(){
+        val recyclerView = findViewById<RecyclerView>(R.id.reciclerMenu)
+        recyclerView.layoutManager = LinearLayoutManager(this)
+        recyclerView.adapter = ListAdapter(ReciclerInfo.ValorLista)
     }
 
     public override fun onStart() {

@@ -16,4 +16,11 @@
     <string name="EventTitle">Eventos</string>
     <string name="ButtonList">Lista</string>
     <string name="ButtonMap">Mapa</string>
+    <string name="textoMenu">Menu</string>
+    <string name="Eventos">Eventos</string>
+    <string name="Charlas">Charlas</string>
+    <string name="Recursos">Recursos</string>
+    <string name="PuntosLila">Puntos Lila</string>
+    <string name="SolicitudActivista">Solicitud Activista</string>
+    <string name="AjustesUsu">Ajustes Usuario</string>
 </resources>
