@@ -1,2 +1,0 @@
-# Punt_Lila
-
