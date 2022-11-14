@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Menu">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/Purpura">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/reciclerMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="0dp"/>
+
+        <Button
+            android:id="@+id/AjustesId"
+            style="@style/buttonStyle"
+            android:layout_width="412dp"
+            android:layout_height="43dp"
+            android:background="@color/black"
+            android:text="@string/AjustesUsu"
+            android:textColor="@color/white"
+            app:cornerRadius="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.402" />
+
+        <Button
+            android:id="@+id/SolActId"
+            style="@style/buttonStyle"
+            android:layout_width="412dp"
+            android:layout_height="43dp"
+            android:background="@color/black"
+            android:text="@string/SolicitudActivista"
+            android:textColor="@color/white"
+            app:cornerRadius="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.34" />
+
+        <Button
+            android:id="@+id/PuntLilaId"
+            style="@style/buttonStyle"
+            android:layout_width="412dp"
+            android:layout_height="43dp"
+            android:background="@color/black"
+            android:text="@string/PuntosLila"
+            android:textColor="@color/white"
+            app:cornerRadius="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.277" />
+
+        <Button
+            android:id="@+id/RecursosId"
+            style="@style/buttonStyle"
+            android:layout_width="412dp"
+            android:layout_height="43dp"
+            android:background="@color/black"
+            android:text="@string/Recursos"
+            android:textColor="@color/white"
+            app:cornerRadius="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.215" />
+
+        <Button
+            android:id="@+id/CharlaId"
+            style="@style/buttonStyle"
+            android:layout_width="412dp"
+            android:layout_height="43dp"
+            android:background="@color/black"
+            android:text="@string/Charlas"
+            android:textColor="@color/white"
+            app:cornerRadius="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.152" />
+
+        <Button
+            android:id="@+id/EventoId"
+            style="@style/buttonStyle"
+            android:layout_width="412dp"
+            android:layout_height="43dp"
+            android:background="@color/black"
+            android:text="@string/Eventos"
+            android:textColor="@color/white"
+            app:cornerRadius="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.09" />
+
+        <TextView
+            android:id="@+id/textMenu"
+            android:layout_width="418dp"
+            android:layout_height="62dp"
+            android:background="@color/Morado"
+            android:text="@string/textoMenu"
+            android:textAlignment="center"
+            android:textSize="38sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
