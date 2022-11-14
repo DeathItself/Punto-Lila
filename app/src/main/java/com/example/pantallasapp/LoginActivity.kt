@@ -14,10 +14,6 @@ class LoginActivity : AppCompatActivity() {
     private lateinit var bin: LoginActivityBinding
     private lateinit var auth: FirebaseAuth
 
-    companion object {
-        private const val TAG = "MainActivity"
-    }
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         bin = LoginActivityBinding.inflate(layoutInflater)
