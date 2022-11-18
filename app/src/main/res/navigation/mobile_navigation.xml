@@ -3,23 +3,41 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/navigation_home">
-
+    app:startDestination="@id/fragment_eventos">
     <fragment
-        android:id="@+id/navigation_home"
-        android:name="com.example.pantallasapp.ui.home.HomeFragment"
-        android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
-
+        android:id="@+id/fragment_charlas"
+        android:name="com.example.pantallasapp.fragment_charlas"
+        android:label="fragment_charlas"
+        tools:layout="@layout/fragment_charlas" />
     <fragment
-        android:id="@+id/navigation_dashboard"
-        android:name="com.example.pantallasapp.ui.dashboard.DashboardFragment"
-        android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
-
+        android:id="@+id/fragment_eventos"
+        android:name="com.example.pantallasapp.fragment_eventos"
+        android:label="fragment_eventos"
+        tools:layout="@layout/fragment_eventos" />
     <fragment
-        android:id="@+id/navigation_notifications"
-        android:name="com.example.pantallasapp.ui.notifications.NotificationsFragment"
-        android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        android:id="@+id/fragment_recursos"
+        android:name="com.example.pantallasapp.fragment_recursos"
+        android:label="fragment_recursos"
+        tools:layout="@layout/fragment_recursos" />
+    <fragment
+        android:id="@+id/fragment_puntoslila"
+        android:name="com.example.pantallasapp.fragment_puntoslila"
+        android:label="fragment_puntoslila"
+        tools:layout="@layout/fragment_puntoslila" />
+    <fragment
+        android:id="@+id/fragment_solicitud_activista2"
+        android:name="com.example.pantallasapp.fragment_solicitud_activista"
+        android:label="fragment_solicitud_activista"
+        tools:layout="@layout/fragment_solicitud_activista" />
+    <fragment
+        android:id="@+id/fragment_ajustes_usuario"
+        android:name="com.example.pantallasapp.fragment_ajustes_usuario"
+        android:label="fragment_ajustes_usuario"
+        tools:layout="@layout/fragment_ajustes_usuario" />
+    <action android:id="@+id/action_global_fragment_solicitud_activista2" app:destination="@id/fragment_solicitud_activista2" />
+    <action android:id="@+id/action_global_fragment_ajustes_usuario" app:destination="@id/fragment_ajustes_usuario" />
+    <action android:id="@+id/action_global_fragment_charlas" app:destination="@id/fragment_charlas" />
+    <action android:id="@+id/action_global_fragment_recursos" app:destination="@id/fragment_recursos" />
+    <action android:id="@+id/action_global_fragment_puntoslila" app:destination="@id/fragment_puntoslila" />
+    <action android:id="@+id/action_global_fragment_eventos" app:destination="@id/fragment_eventos" />
 </navigation>
