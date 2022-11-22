@@ -30,7 +30,6 @@ class MainActivity : AppCompatActivity() {
         }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-       // val navController = mynçavHostFragment.navController
         val navController = findNavController(R.id.myNavHostFragment)
         return when (item.itemId) {
 
@@ -43,36 +42,26 @@ class MainActivity : AppCompatActivity() {
             R.id.charlas ->{
                 Toast.makeText(applicationContext, "click on charlas", Toast.LENGTH_LONG).show()
                 navController.navigate(R.id.action_global_fragment_charlas)
-                // Navigation.findNavController(this, R.id.myNavHostFragment).navigate(R.id.fragment_charlas)
-
                 return true
             }
             R.id.recursos ->{
-                Toast.makeText(applicationContext, "click on charlas", Toast.LENGTH_LONG).show()
+                Toast.makeText(applicationContext, "click on recursos", Toast.LENGTH_LONG).show()
                 navController.navigate(R.id.action_global_fragment_recursos)
-                // Navigation.findNavController(this, R.id.myNavHostFragment).navigate(R.id.fragment_charlas)
-
                 return true
             }
             R.id.puntos_lila ->{
-                Toast.makeText(applicationContext, "click on charlas", Toast.LENGTH_LONG).show()
+                Toast.makeText(applicationContext, "click on puntos lila", Toast.LENGTH_LONG).show()
                 navController.navigate(R.id.action_global_fragment_puntoslila)
-
-
                 return true
             }
             R.id.activista ->{
-                Toast.makeText(applicationContext, "click on charlas", Toast.LENGTH_LONG).show()
+                Toast.makeText(applicationContext, "click on activista", Toast.LENGTH_LONG).show()
                 navController.navigate(R.id.action_global_fragment_solicitud_activista2)
-                // Navigation.findNavController(this, R.id.myNavHostFragment).navigate(R.id.fragment_charlas)
-
                 return true
             }
             R.id.ajustes_usuario ->{
-                Toast.makeText(applicationContext, "click on charlas", Toast.LENGTH_LONG).show()
+                Toast.makeText(applicationContext, "click on ajustes usuario", Toast.LENGTH_LONG).show()
                 navController.navigate(R.id.action_global_fragment_ajustes_usuario)
-                // Navigation.findNavController(this, R.id.myNavHostFragment).navigate(R.id.fragment_charlas)
-
                 return true
             }
             else -> super.onOptionsItemSelected(item)
