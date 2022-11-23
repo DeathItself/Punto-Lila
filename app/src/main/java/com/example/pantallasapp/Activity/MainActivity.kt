@@ -1,5 +1,7 @@
-package com.example.pantallasapp
+package com.example.pantallasapp.Activity
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuInflater
@@ -7,6 +9,7 @@ import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
+import com.example.pantallasapp.R
 import com.example.pantallasapp.databinding.ActivityMainBinding
 
 
@@ -14,12 +17,16 @@ import com.example.pantallasapp.databinding.ActivityMainBinding
 class MainActivity : AppCompatActivity() {
 
     lateinit var binding: ActivityMainBinding
+    val uri = Uri.parse("geo:41.56602039747692, 2.011540981764755")
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        binding.root.setOnClickListener{
+            showMap(uri)
+        }
     }
 
 
@@ -66,5 +73,16 @@ class MainActivity : AppCompatActivity() {
             }
             else -> super.onOptionsItemSelected(item)
         }
+    }
+
+    fun showMap(geoLocation: Uri) {
+
+        val intent = Intent(Intent.ACTION_VIEW).apply {
+            data = geoLocation
+        }
+        if (intent.resolveActivity(packageManager) != null) {
+            startActivity(intent)
+        }
+
     }
 }
