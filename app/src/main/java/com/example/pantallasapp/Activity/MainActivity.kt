@@ -9,8 +9,6 @@ import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
-import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.pantallasapp.Fragments.Fragment_eventos
 import com.example.pantallasapp.R
 import com.example.pantallasapp.databinding.ActivityMainBinding
 
@@ -19,12 +17,8 @@ import com.example.pantallasapp.databinding.ActivityMainBinding
 class MainActivity : AppCompatActivity() {
 
     lateinit var binding: ActivityMainBinding
-    private val myAdapter: ListAdapter = ListAdapter()
     val uri = Uri.parse("geo:41.56602039747692, 2.011540981764755")
 
-    companion object {
-        private const val TAG = "MainActivity"
-    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,8 +27,6 @@ class MainActivity : AppCompatActivity() {
         binding.root.setOnClickListener{
             showMap(uri)
         }
-
-        initRecyclerView()
     }
 
 
@@ -81,42 +73,6 @@ class MainActivity : AppCompatActivity() {
             }
             else -> super.onOptionsItemSelected(item)
         }
-    }
-
-    private fun initRecyclerView(){
-
-        binding.ReciclerView.setHasFixedSize(true)
-
-        binding.ReciclerView.layoutManager =  LinearLayoutManager(this)
-
-        myAdapter.ListaRecyclerAdapter(getList(),  this)
-
-        binding.ReciclerView.adapter = myAdapter
-
-    }
-
-    private fun getList(): MutableList<Fragment_eventos.ListaMenu>{
-        val lista: MutableList<Fragment_eventos.ListaMenu> = arrayListOf()
-        lista.add(
-            Fragment_eventos.ListaMenu(
-                "Concierto Techno",
-                "https://media.resources.festicket.com/www/magazine/Techno_L_UiNUh4Q.jpg"
-            )
-        )
-        lista.add(
-            Fragment_eventos.ListaMenu(
-                "Festa Major Terrassa",
-                "https://www.alleventshotels.com/wp-content/uploads/2018/08/festa-major.jpg"
-            )
-        )
-        lista.add(
-            Fragment_eventos.ListaMenu(
-                "Taller modernista",
-                "https://www.ruidophoto.com/media/post/Taller5-10-5_E5Wg3Z0.jpg"
-            )
-        )
-
-        return lista
     }
 
     fun showMap(geoLocation: Uri) {

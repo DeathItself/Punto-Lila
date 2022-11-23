@@ -1,8 +1,5 @@
-<<<<<<< HEAD:app/src/main/java/com/example/pantallasapp/Fragments/fragment_recursos.kt
 package com.example.pantallasapp.Fragments
-=======
-package com.example.pantallasapp.ui.Fragments
->>>>>>> 12cf45b1ad3c48137490bc7f8be5daa3fcd4a4be:app/src/main/java/com/example/pantallasapp/ui/Fragments/PantallaRegistro.kt
+
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

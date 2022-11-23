@@ -3,7 +3,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-<<<<<<< HEAD
     app:startDestination="@id/fragment_eventos">
     <fragment
         android:id="@+id/fragment_charlas"
@@ -41,8 +40,7 @@
     <action android:id="@+id/action_global_fragment_recursos" app:destination="@id/fragment_recursos" />
     <action android:id="@+id/action_global_fragment_puntoslila" app:destination="@id/fragment_puntoslila" />
     <action android:id="@+id/action_global_fragment_eventos" app:destination="@id/fragment_eventos" />
-=======
-    app:startDestination="@id/mainActivity">
+
     <activity
         android:id="@+id/mainActivity"
         android:name="com.example.pantallasapp.ui.Activities.MainActivity"

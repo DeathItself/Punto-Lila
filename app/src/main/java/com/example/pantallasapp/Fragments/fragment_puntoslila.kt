@@ -1,18 +1,11 @@
-<<<<<<< HEAD:app/src/main/java/com/example/pantallasapp/Fragments/fragment_puntoslila.kt
 package com.example.pantallasapp.Fragments
-=======
-package com.example.pantallasapp.ui.Fragments
->>>>>>> 12cf45b1ad3c48137490bc7f8be5daa3fcd4a4be:app/src/main/java/com/example/pantallasapp/ui/Fragments/Conciertos.kt
+
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-<<<<<<< HEAD:app/src/main/java/com/example/pantallasapp/Fragments/fragment_puntoslila.kt
-=======
-import androidx.fragment.app.Fragment
->>>>>>> 12cf45b1ad3c48137490bc7f8be5daa3fcd4a4be:app/src/main/java/com/example/pantallasapp/ui/Fragments/Conciertos.kt
 import com.example.pantallasapp.R
 
 // TODO: Rename parameter arguments, choose names that match

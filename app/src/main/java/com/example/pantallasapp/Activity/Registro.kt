@@ -1,8 +1,4 @@
-<<<<<<< HEAD:app/src/main/java/com/example/pantallasapp/Activity/Registro.kt
 package com.example.pantallasapp.Activity
-=======
-package com.example.pantallasapp.ui.Activities
->>>>>>> 12cf45b1ad3c48137490bc7f8be5daa3fcd4a4be:app/src/main/java/com/example/pantallasapp/ui/Activities/Registro.kt
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

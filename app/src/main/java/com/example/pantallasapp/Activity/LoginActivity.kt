@@ -1,99 +1,100 @@
-<<<<<<< HEAD:app/src/main/java/com/example/pantallasapp/Activity/LoginActivity.kt
 package com.example.pantallasapp.Activity
-=======
-package com.example.pantallasapp.ui.Activities
->>>>>>> 12cf45b1ad3c48137490bc7f8be5daa3fcd4a4be:app/src/main/java/com/example/pantallasapp/ui/Activities/MainActivity.kt
 
 import android.content.Intent
-import android.net.Uri
-import android.os.Bundle
-<<<<<<< HEAD:app/src/main/java/com/example/pantallasapp/Activity/LoginActivity.kt
-import com.example.pantallasapp.databinding.LoginActivityBinding
-=======
-import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+import android.text.TextUtils
+import android.util.Log
+import android.view.View
+import android.widget.EditText
+import android.widget.Toast
 import com.example.pantallasapp.R
-import com.example.pantallasapp.databinding.ActivityMainBinding
->>>>>>> 12cf45b1ad3c48137490bc7f8be5daa3fcd4a4be:app/src/main/java/com/example/pantallasapp/ui/Activities/MainActivity.kt
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.FirebaseUser
-import com.google.firebase.auth.ktx.auth
-import com.google.firebase.ktx.Firebase
+import kotlin.properties.Delegates
 
 class LoginActivity : AppCompatActivity() {
 
-    private lateinit var bin: LoginActivityBinding
-    private lateinit var auth: FirebaseAuth
-    val uri = Uri.parse("geo:41.56602039747692, 2.011540981764755")
+    private val TAG = "LoginActivity"
+
+    private var email by Delegates.notNull<String>()
+    private var password by Delegates.notNull<String>()
+    private lateinit var etEmail: EditText
+    private lateinit var etPassword: EditText
+
+
+    private lateinit var mAuth: FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        bin = LoginActivityBinding.inflate(layoutInflater)
-        setContentView(bin.root)
-
-        // Initialize Firebase Auth
-        auth = Firebase.auth
-<<<<<<< HEAD:app/src/main/java/com/example/pantallasapp/Activity/LoginActivity.kt
-=======
-        bin.mapaId.setOnClickListener{
-           showMap(uri)
-        }
-      //  initRecyclerView()
->>>>>>> 12cf45b1ad3c48137490bc7f8be5daa3fcd4a4be:app/src/main/java/com/example/pantallasapp/ui/Activities/MainActivity.kt
-
-       // bin.Registrarse.setOnClickListener {
-       //     intent = Intent( this, Registro::class.java )
-       //     startActivity(intent) }
-
-
-
-
-<<<<<<< HEAD:app/src/main/java/com/example/pantallasapp/Activity/LoginActivity.kt
-=======
-    }
-    //esto está pendiente de cambio por eso sigue el findViewById
-   // private fun initRecyclerView(){
-        //val recyclerView = findViewById<RecyclerView>(R.id.reciclerMenu)
-       // recyclerView.layoutManager = LinearLayoutManager(this)
-       // recyclerView.adapter = ListAdapter(ReciclerInfo.ValorLista) }
->>>>>>> 12cf45b1ad3c48137490bc7f8be5daa3fcd4a4be:app/src/main/java/com/example/pantallasapp/ui/Activities/MainActivity.kt
-
-
-    public override fun onStart() {
-        super.onStart()
-        // Check if user is signed in (non-null) and update UI accordingly.
-        val currentUser = auth.currentUser
-        if(currentUser != null){
-           // reload();
-        }
+        setContentView(R.layout.login_activity)
+        initialise()
     }
 
-
-    fun showMap(geoLocation: Uri) {
-
-            val intent = Intent(Intent.ACTION_VIEW).apply {
-                data = geoLocation
-            }
-            if (intent.resolveActivity(packageManager) != null) {
-                startActivity(intent)
-            }
-
+    /*Creamos un método para inicializar nuestros elementos del diseño y la autenticación de firebase*/
+    private fun initialise() {
+        etEmail = findViewById(R.id.correoId)
+        etPassword = findViewById(R.id.contraId)
+        mAuth = FirebaseAuth.getInstance()
     }
 
-    private fun updateUI(user: FirebaseUser?) {
-       // reload()
-    }
+//Ahora vamos a Iniciar sesión con firebase es muy sencillo
 
-    private fun reload() { //quan canviem/entrem en un usuari amb l'aplicació
-        val user = auth.currentUser
+    private fun loginUser() {
+        //Obtenemos usuario y contraseña
+        email = etEmail.text.toString()
+        password = etPassword.text.toString()
+        //Verificamos que los campos no este vacios
+        if (!TextUtils.isEmpty(email) && !TextUtils.isEmpty(password)) {
+            Log.d("LoginActivity", "Antes de signin")
+            //Iniciamos sesión con el método signIn y enviamos usuario y contraseña
+            mAuth.signInWithEmailAndPassword(email, password)
+                .addOnCompleteListener(this) {
 
-        user?.let {
-            val nom = {"sense nom"}
-           // bin.Registrarse.setHint("Usuari email: ${user.email}\n$nom")
-        } ?: run {
-           // bin.Registrarse.setHint("Usuari: no assignat")
+                    //Verificamos que la tarea se ejecutó correctamente
+                        task ->
+                    if (task.isSuccessful) {
+                        Log.d("LoginActivity", "Logged")
+                        // Si se inició correctamente la sesión vamos a la vista Home de la aplicación
+                        goHome() // Creamos nuestro método en la parte de abajo
+                    } else {
+                        // sino le avisamos el usuairo que orcurrio un problema
+                        Toast.makeText(
+                            this, "Error en auntentificación.",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                }
+        } else {
+            Toast.makeText(this, "Introducca todos los campos", Toast.LENGTH_SHORT).show()
         }
     }
 
 
+    private fun goHome() {
+        val intent = Intent(this, MainActivity::class.java)
+        startActivity(intent)
+    }
+
+/* Tenemos que crear nuestros métodos con el mismo nombre que le agregamos a nuestros botones en el atributo onclick y forzosamente tenemos que recibir un parámetro view para que sea reconocido como click de nuestro button ya que en view podemos modificar los atributos*/
+
+    /*Primero creamos nuestro evento login dentro de este llamamos nuestro método loginUser al dar click en el botón se iniciara sesión */
+    fun login(view: View) {
+        loginUser()
+    }
+
+/*Si se olvido de la contraseña lo enviaremos en la siguiente actividad*/
+
+//fun forgotPassword(view: View) {
+// startActivity(Intent(this,
+//    activity_recuperar_psw::class.java))
+// }
+
+/*Si quiere registrarse lo enviaremos en la siguiente actividad*/
+
+    fun register(view: View) {
+        intent = Intent(this, Registro::class.java)
+        startActivity(intent)
+
+
+    }
 }

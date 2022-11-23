@@ -7,15 +7,15 @@ import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.example.pantallasapp.databinding.ListEventosBinding
 import coil.load
-import com.example.pantallasapp.Fragments.ListaMenu
+import com.example.pantallasapp.Fragments.Fragment_eventos
 
 class ListAdapter: RecyclerView.Adapter<ListAdapter.ListViewHolder>(){
-    var lista:MutableList<ListaMenu> = ArrayList()
+    var lista:MutableList<Fragment_eventos.ListaMenu> = ArrayList()
     lateinit var context: Context
 
-    fun ListaRecyclerAdapter(list:MutableList<ListaMenu>, contxt: Context){
+    fun ListaRecyclerAdapter(list:MutableList<Fragment_eventos.ListaMenu>, context: Context){
         this.lista = list
-        this.context = contxt
+        this.context = context
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ListViewHolder {
@@ -46,7 +46,7 @@ class ListAdapter: RecyclerView.Adapter<ListAdapter.ListViewHolder>(){
     }
 
     class ListViewHolder(val binding: ListEventosBinding): RecyclerView.ViewHolder(binding.root){
-        fun bind(lista: ListaMenu) {}
+        fun bind(lista: Fragment_eventos.ListaMenu) {}
     }
 
 }

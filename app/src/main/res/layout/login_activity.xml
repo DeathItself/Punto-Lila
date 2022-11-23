@@ -38,7 +38,8 @@
         app:layout_constraintHorizontal_bias="0.511"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.817" />
+        app:layout_constraintVertical_bias="0.817"
+        android:onClick="register"/>
 
     <Button
         android:id="@+id/InicioSesion"
@@ -51,7 +52,8 @@
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.679" />
+        app:layout_constraintVertical_bias="0.679"
+        android:onClick="login"/>
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/correoId"
