@@ -38,12 +38,16 @@
         app:layout_constraintHorizontal_bias="0.511"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.817" />
+        app:layout_constraintVertical_bias="0.817"
+        android:onClick="register"/>
 
     <Button
         android:id="@+id/InicioSesion"
         style="@style/buttonStyle"
-        android:backgroundTint="@color/Morado"
+        android:layout_width="157dp"
+        android:layout_height="58dp"
+        android:background="@color/Morado"
+        android:textColor="@color/black"
         android:text="@string/inicia_sessi"
         app:cornerRadius="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -51,7 +55,8 @@
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.679" />
+        app:layout_constraintVertical_bias="0.679"
+        android:onClick="login"/>
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/correoId"

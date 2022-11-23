@@ -3,59 +3,98 @@ package com.example.pantallasapp
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.pantallasapp.databinding.LoginActivityBinding
+import android.text.TextUtils
+import android.util.Log
+import android.view.View
+import android.widget.EditText
+import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.FirebaseUser
-import com.google.firebase.auth.ktx.auth
-import com.google.firebase.ktx.Firebase
+import kotlin.math.log
+import kotlin.properties.Delegates
 
 class LoginActivity : AppCompatActivity() {
 
-    private lateinit var bin: LoginActivityBinding
-    private lateinit var auth: FirebaseAuth
+    private val TAG = "LoginActivity"
+
+    private var email by Delegates.notNull<String>()
+    private var password by Delegates.notNull<String>()
+    private lateinit var etEmail: EditText
+    private lateinit var etPassword: EditText
+
+
+    private lateinit var mAuth: FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        bin = LoginActivityBinding.inflate(layoutInflater)
-        setContentView(bin.root)
+        setContentView(R.layout.login_activity)
+        initialise()
+    }
 
-        // Initialize Firebase Auth
-        auth = Firebase.auth
+    /*Creamos un método para inicializar nuestros elementos del diseño y la autenticación de firebase*/
+    private fun initialise() {
+        etEmail = findViewById(R.id.correoId)
+        etPassword = findViewById(R.id.contraId)
+        mAuth = FirebaseAuth.getInstance()
+    }
 
-        bin.Registrarse.setOnClickListener {
-            intent = Intent( this, Registro::class.java )
-            startActivity(intent)
+//Ahora vamos a Iniciar sesión con firebase es muy sencillo
 
+    private fun loginUser() {
+        //Obtenemos usuario y contraseña
+        email = etEmail.text.toString()
+        password = etPassword.text.toString()
+        //Verificamos que los campos no este vacios
+        if (!TextUtils.isEmpty(email) && !TextUtils.isEmpty(password)) {
+            Log.d("LoginActivity", "Antes de signin")
+            //Iniciamos sesión con el método signIn y enviamos usuario y contraseña
+            mAuth.signInWithEmailAndPassword(email, password)
+                .addOnCompleteListener(this) {
+
+                    //Verificamos que la tarea se ejecutó correctamente
+                        task ->
+                    if (task.isSuccessful) {
+                        Log.d("LoginActivity", "Logged")
+                        // Si se inició correctamente la sesión vamos a la vista Home de la aplicación
+                        goHome() // Creamos nuestro método en la parte de abajo
+                    } else {
+                        // sino le avisamos el usuairo que orcurrio un problema
+                        Toast.makeText(
+                            this, "Error en auntentificación.",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                }
+        } else {
+            Toast.makeText(this, "Introducca todos los campos", Toast.LENGTH_SHORT).show()
         }
-
-
     }
 
 
-
-    public override fun onStart() {
-        super.onStart()
-        // Check if user is signed in (non-null) and update UI accordingly.
-        val currentUser = auth.currentUser
-        if(currentUser != null){
-            reload();
-        }
+    private fun goHome() {
+        val intent = Intent(this, MainActivity::class.java)
+        startActivity(intent)
     }
 
-    private fun updateUI(user: FirebaseUser?) {
-        reload()
+/* Tenemos que crear nuestros métodos con el mismo nombre que le agregamos a nuestros botones en el atributo onclick y forzosamente tenemos que recibir un parámetro view para que sea reconocido como click de nuestro button ya que en view podemos modificar los atributos*/
+
+    /*Primero creamos nuestro evento login dentro de este llamamos nuestro método loginUser al dar click en el botón se iniciara sesión */
+    fun login(view: View) {
+        loginUser()
     }
 
-    private fun reload() { //quan canviem/entrem en un usuari amb l'aplicació
-        val user = auth.currentUser
+/*Si se olvido de la contraseña lo enviaremos en la siguiente actividad*/
 
-        user?.let {
-            val nom = {"sense nom"}
-            bin.Registrarse.setHint("Usuari email: ${user.email}\n$nom")
-        } ?: run {
-            bin.Registrarse.setHint("Usuari: no assignat")
-        }
+//fun forgotPassword(view: View) {
+// startActivity(Intent(this,
+//    activity_recuperar_psw::class.java))
+// }
+
+/*Si quiere registrarse lo enviaremos en la siguiente actividad*/
+
+    fun register(view: View) {
+        intent = Intent(this, Registro::class.java)
+        startActivity(intent)
+
+
     }
-
-
 }
