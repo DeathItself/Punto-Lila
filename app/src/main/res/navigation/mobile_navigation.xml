@@ -6,7 +6,7 @@
     app:startDestination="@id/fragment_eventos">
     <fragment
         android:id="@+id/fragment_charlas"
-        android:name="com.example.pantallasapp.Activity.`fragment_charlas.kt`"
+        android:name="com.example.pantallasapp.Fragments.fragment_charlas"
         android:label="fragment_charlas"
         tools:layout="@layout/fragment_charlas" />
     <fragment
@@ -41,9 +41,5 @@
     <action android:id="@+id/action_global_fragment_puntoslila" app:destination="@id/fragment_puntoslila" />
     <action android:id="@+id/action_global_fragment_eventos" app:destination="@id/fragment_eventos" />
 
-    <activity
-        android:id="@+id/mainActivity"
-        android:name="com.example.pantallasapp.ui.Activities.MainActivity"
-        android:label="MainActivity" />
->>>>>>> 12cf45b1ad3c48137490bc7f8be5daa3fcd4a4be
+
 </navigation>
