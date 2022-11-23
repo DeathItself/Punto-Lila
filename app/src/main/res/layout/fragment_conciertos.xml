@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/Purpura"
     android:backgroundTint="@color/Purpura"
-    tools:context=".Conciertos">
+    >
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
@@ -73,10 +73,11 @@
         app:layout_constraintVertical_bias="0.073" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/mapId"
         style="@style/botonEvento"
         android:layout_width="209dp"
         android:layout_height="90dp"
+        android:onClick="showMap"
         android:text="@string/ButtonMap"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

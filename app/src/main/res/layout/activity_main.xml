@@ -4,70 +4,104 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+<<<<<<< HEAD
+    tools:context=".Activity.MainActivity"
     android:background="@color/Purpura">
 
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/contraId"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/Password"
-        android:inputType="textPassword"
-        android:text=""
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.444"
-        tools:ignore="MissingConstraints">
-
-    </com.google.android.material.textfield.TextInputEditText>
-
-
-    <Button
-        android:id="@+id/Registrarse"
-        style="@style/buttonStyle"
-        android:layout_width="157dp"
-        android:layout_height="58dp"
-        android:background="@color/Morado"
-        android:text="@string/registrar_se"
-        android:textColor="@color/black"
-        app:cornerRadius="30dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.511"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.817" />
-
-    <Button
-        android:id="@+id/InicioSesion"
-        style="@style/buttonStyle"
-        android:backgroundTint="@color/Morado"
-        android:text="@string/inicia_sessi"
-        app:cornerRadius="30dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.679" />
-
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/correoId"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/correo"
-        android:text=""
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.358"
-        tools:ignore="MissingConstraints">
-
-    </com.google.android.material.textfield.TextInputEditText>
-
-
+<androidx.fragment.app.FragmentContainerView
+    android:id="@+id/myNavHostFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:defaultNavHost="true"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    android:name="androidx.navigation.fragment.NavHostFragment"
+    app:navGraph="@navigation/mobile_navigation"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
+=======
+    android:background="@color/Purpura"
+    android:backgroundTint="@color/Purpura"
+    >
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        style="@style/barraTexto"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <ImageView
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_arrow_left_white" />
+
+        <TextView
+            android:id="@+id/tv_title_toolbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/EventTitle"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="44dp"
+            tools:layout_editor_absoluteY="14dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/menu_gallery_toolbar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="18dp"
+                android:layout_toStartOf="@+id/menu_share_toolbar"
+                android:src="@android:drawable/ic_search_category_default" />
+
+            <ImageView
+                android:id="@+id/menu_share_toolbar"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="11dp"
+                android:src="@android:drawable/ic_menu_share" />
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <Button
+        android:id="@+id/button"
+        style="@style/botonEvento"
+        android:layout_width="217dp"
+        android:layout_height="90dp"
+        android:text="@string/ButtonList"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.073" />
+
+    <Button
+        android:id="@+id/mapaId"
+        style="@style/botonEvento"
+        android:layout_width="209dp"
+        android:layout_height="90dp"
+        android:onClick="showMap"
+        android:text="@string/ButtonMap"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.073" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+>>>>>>> 12cf45b1ad3c48137490bc7f8be5daa3fcd4a4be
