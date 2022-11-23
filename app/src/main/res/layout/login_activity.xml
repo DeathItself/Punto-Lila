@@ -44,10 +44,7 @@
     <Button
         android:id="@+id/InicioSesion"
         style="@style/buttonStyle"
-        android:layout_width="157dp"
-        android:layout_height="58dp"
-        android:background="@color/Morado"
-        android:textColor="@color/black"
+        android:backgroundTint="@color/Morado"
         android:text="@string/inicia_sessi"
         app:cornerRadius="30dp"
         app:layout_constraintBottom_toBottomOf="parent"

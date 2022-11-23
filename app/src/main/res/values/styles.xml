@@ -11,6 +11,7 @@
     </style>
     <style name="colorFondo">
         <item name="android:buttonStyle">@color/Purpura</item>
+        <item name="android:background">@color/Purpura</item>
     </style>
 
     <style name="buttonStyle" parent="Boton">
@@ -27,6 +28,9 @@
     <style name="textoMenu">
         <item name="android:textColor">@color/black</item>
         <item name="android:background">@color/Morado</item>
+    </style>
+    <style name="cardview">
+        <item name="android:background">@color/black</item>
     </style>
 
 </resources>
