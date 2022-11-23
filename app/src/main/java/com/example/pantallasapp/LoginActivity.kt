@@ -9,7 +9,6 @@ import android.view.View
 import android.widget.EditText
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
-import kotlin.math.log
 import kotlin.properties.Delegates
 
 class LoginActivity : AppCompatActivity() {
