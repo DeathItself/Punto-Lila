@@ -27,6 +27,7 @@ class MainActivity : AppCompatActivity() {
         binding.root.setOnClickListener{
             showMap(uri)
         }
+
     }
 
 
@@ -36,6 +37,7 @@ class MainActivity : AppCompatActivity() {
             return true
         }
 
+
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         val navController = findNavController(R.id.myNavHostFragment)
         return when (item.itemId) {
@@ -44,31 +46,37 @@ class MainActivity : AppCompatActivity() {
             R.id.eventos -> {
                 Toast.makeText(applicationContext, "click on eventos", Toast.LENGTH_LONG).show()
                 navController.navigate(R.id.action_global_fragment_eventos)
-                return true
-            }
-            R.id.charlas ->{
-                Toast.makeText(applicationContext, "click on charlas", Toast.LENGTH_LONG).show()
-                navController.navigate(R.id.action_global_fragment_charlas)
+                supportActionBar!!.title = "Eventos"
                 return true
             }
             R.id.recursos ->{
                 Toast.makeText(applicationContext, "click on recursos", Toast.LENGTH_LONG).show()
                 navController.navigate(R.id.action_global_fragment_recursos)
+                supportActionBar!!.title = "Recursos"
                 return true
             }
             R.id.puntos_lila ->{
                 Toast.makeText(applicationContext, "click on puntos lila", Toast.LENGTH_LONG).show()
                 navController.navigate(R.id.action_global_fragment_puntoslila)
+                supportActionBar!!.title = "Puntos Lila"
                 return true
             }
             R.id.activista ->{
                 Toast.makeText(applicationContext, "click on activista", Toast.LENGTH_LONG).show()
                 navController.navigate(R.id.action_global_fragment_solicitud_activista2)
+                supportActionBar!!.title = "Solicitud Activista"
                 return true
             }
             R.id.ajustes_usuario ->{
                 Toast.makeText(applicationContext, "click on ajustes usuario", Toast.LENGTH_LONG).show()
                 navController.navigate(R.id.action_global_fragment_ajustes_usuario)
+                supportActionBar!!.title = "Ajustes Usuario"
+                return true
+            }
+            R.id.mis_eventos ->{
+                Toast.makeText(applicationContext, "click on mis eventos", Toast.LENGTH_LONG).show()
+                navController.navigate(R.id.action_global_fragment_Mis_Eventos)
+                supportActionBar!!.title = "Mis Eventos"
                 return true
             }
             else -> super.onOptionsItemSelected(item)

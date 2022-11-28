@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragment_solicitud_activista">
+    tools:context=".Fragments.fragment_solicitud_activista">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -13,56 +13,7 @@
         android:backgroundTint="@color/Purpura"
         tools:context=".Conciertos">
 
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
-            style="@style/barraTexto"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0">
 
-            <ImageView
-                android:id="@+id/btn_back"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_arrow_left_white" />
-
-            <TextView
-                android:id="@+id/tv_title_toolbar"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/SolicitudActivista"
-                android:textColor="@color/white"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                tools:layout_editor_absoluteX="44dp"
-                tools:layout_editor_absoluteY="14dp" />
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <ImageView
-                    android:id="@+id/menu_gallery_toolbar"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="18dp"
-                    android:layout_toStartOf="@+id/menu_share_toolbar"
-                    android:src="@android:drawable/ic_search_category_default" />
-
-                <ImageView
-                    android:id="@+id/menu_share_toolbar"
-                    android:layout_width="wrap_content"
-                    android:layout_height="45dp"
-                    android:layout_alignParentEnd="true"
-                    android:layout_marginEnd="11dp"
-                    android:src="@android:drawable/ic_menu_share" />
-            </RelativeLayout>
-        </androidx.appcompat.widget.Toolbar>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

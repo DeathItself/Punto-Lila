@@ -6,9 +6,6 @@
         android:id="@+id/eventos"
         android:title="@string/Eventos" />
     <item
-        android:id="@+id/charlas"
-        android:title="@string/Charlas" />
-    <item
         android:id="@+id/recursos"
         android:title="@string/Recursos" />
     <item
@@ -20,4 +17,7 @@
     <item
         android:id="@+id/ajustes_usuario"
         android:title="@string/AjustesUsu" />
+    <item
+        android:id="@+id/mis_eventos"
+        android:title="@string/MisEvents" />
 </menu>
