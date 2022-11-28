@@ -5,15 +5,17 @@
     android:id="@+id/mobile_navigation"
     app:startDestination="@id/fragment_eventos">
     <fragment
-        android:id="@+id/fragment_charlas"
-        android:name="com.example.pantallasapp.Fragments.fragment_charlas"
-        android:label="fragment_charlas"
-        tools:layout="@layout/fragment_charlas" />
-    <fragment
         android:id="@+id/fragment_eventos"
         android:name="com.example.pantallasapp.Fragments.Fragment_eventos"
         android:label="fragment_eventos"
-        tools:layout="@layout/fragment_eventos" />
+        tools:layout="@layout/fragment_eventos" >
+        <action
+            android:id="@+id/action_fragment_eventos_to_fragment_mis_eventos"
+            app:destination="@id/fragment_mis_eventos" />
+        <argument
+            android:name="eventosApuntado"
+            app:argType="string" />
+    </fragment>
     <fragment
         android:id="@+id/fragment_recursos"
         android:name="com.example.pantallasapp.Fragments.fragment_recursos"
@@ -34,12 +36,17 @@
         android:name="com.example.pantallasapp.Fragments.FragmentAjustesUsuario"
         android:label="fragment_ajustes_usuario"
         tools:layout="@layout/fragment_ajustes_usuario" />
+    <fragment
+        android:id="@+id/fragment_mis_eventos"
+        android:name="com.example.pantallasapp.Fragments.fragmentMisEventos"
+        android:label="fragment_Mis_Eventos"
+        tools:layout="@layout/fragment_mis_eventos" />
     <action android:id="@+id/action_global_fragment_solicitud_activista2" app:destination="@id/fragment_solicitud_activista2" />
     <action android:id="@+id/action_global_fragment_ajustes_usuario" app:destination="@id/fragment_ajustes_usuario" />
-    <action android:id="@+id/action_global_fragment_charlas" app:destination="@id/fragment_charlas" />
     <action android:id="@+id/action_global_fragment_recursos" app:destination="@id/fragment_recursos" />
     <action android:id="@+id/action_global_fragment_puntoslila" app:destination="@id/fragment_puntoslila" />
     <action android:id="@+id/action_global_fragment_eventos" app:destination="@id/fragment_eventos" />
+    <action android:id="@+id/action_global_fragment_Mis_Eventos" app:destination="@id/fragment_mis_eventos" />
 
 
 </navigation>

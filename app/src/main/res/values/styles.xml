@@ -21,6 +21,7 @@
     </style>
     <style name="barraTexto">
         <item name="android:background">@color/Morado</item>
+        <item name="android:textColor">@color/black</item>
     </style>
     <style name="botonEvento">
         <item name="android:backgroundTint">@color/Morado</item>
@@ -31,6 +32,9 @@
     </style>
     <style name="cardview">
         <item name="android:background">@color/black</item>
+    </style>
+    <style name="Titulo">
+        <item name="android:textColor">@color/black</item>
     </style>
 
 </resources>

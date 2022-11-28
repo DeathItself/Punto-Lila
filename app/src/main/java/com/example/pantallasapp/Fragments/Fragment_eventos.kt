@@ -2,11 +2,14 @@ package com.example.pantallasapp.Fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
+import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.pantallasapp.Activity.ListAdapter
+import com.example.pantallasapp.R
 import com.example.pantallasapp.databinding.FragmentEventosBinding
 
 class Fragment_eventos : Fragment() {
@@ -19,18 +22,25 @@ class Fragment_eventos : Fragment() {
     ): View? {
         _bin = FragmentEventosBinding.inflate(inflater, container, false)
         return bin.root
+
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initRecyclerView()
+        bin.mostrarMyEvents.setOnClickListener{
+            Navigation.findNavController(it).navigate(R.id.action_fragment_eventos_to_fragment_mis_eventos)
 
+        }
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
 
         super.onCreate(savedInstanceState)
         _bin = FragmentEventosBinding.inflate(layoutInflater)
+        bin.mostrarMyEvents.setOnClickListener(){
+
+        }
 
     }
 
