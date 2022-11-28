@@ -24,4 +24,7 @@
     <string name="SolicitudActivista">Solicitud Activista</string>
     <string name="AjustesUsu">Ajustes Usuario</string>
     <string name="activista">Activista</string>
+    <string name="MisEvents">Mis eventos</string>
+    <string name="textoActivista">¿Quieres ser activista?</string>
+    <string name="condiciones">He leído y acepto las condiciones de uso y las Políticas de Privacidad</string>
 </resources>
