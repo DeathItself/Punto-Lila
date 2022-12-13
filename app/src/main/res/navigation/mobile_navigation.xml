@@ -12,9 +12,6 @@
         <action
             android:id="@+id/action_fragment_eventos_to_fragment_mis_eventos"
             app:destination="@id/fragment_mis_eventos" />
-        <argument
-            android:name="eventosApuntado"
-            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/fragment_recursos"
@@ -40,7 +37,11 @@
         android:id="@+id/fragment_mis_eventos"
         android:name="com.example.pantallasapp.Fragments.fragmentMisEventos"
         android:label="fragment_Mis_Eventos"
-        tools:layout="@layout/fragment_mis_eventos" />
+        tools:layout="@layout/fragment_mis_eventos">
+    <argument
+        android:name="eventosApuntado"
+        app:argType="string" />
+    </fragment>
     <action android:id="@+id/action_global_fragment_solicitud_activista2" app:destination="@id/fragment_solicitud_activista2" />
     <action android:id="@+id/action_global_fragment_ajustes_usuario" app:destination="@id/fragment_ajustes_usuario" />
     <action android:id="@+id/action_global_fragment_recursos" app:destination="@id/fragment_recursos" />
