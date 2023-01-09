@@ -8,12 +8,14 @@ import com.example.pantallasapp.databinding.ActivityRegistroBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.auth.ktx.userProfileChangeRequest
+import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.ktx.Firebase
 
 class Registro : AppCompatActivity() {
 
     private lateinit var bin: ActivityRegistroBinding
     private lateinit var auth: FirebaseAuth
+    private val db = FirebaseFirestore.getInstance()
 
     private companion object {
         private const val TAG = "Login"
@@ -65,7 +67,6 @@ class Registro : AppCompatActivity() {
                 if (task.isSuccessful) {
                     // Sign in success, update UI with the signed-in user's information
                     Log.d(TAG, "createUserWithEmail:success")
-                    val user = auth.currentUser
                     if( nom.length > 1 ) posaNomUser( nom )
                     finish()
                 } else {
@@ -81,7 +82,6 @@ class Registro : AppCompatActivity() {
     private fun posaNomUser( nom: String ) { //canvia el perfil de l'usuari
         val profileUpdates = userProfileChangeRequest {
             displayName = nom
-            //photoUri = Uri.parse("https://example.com/jane-q-user/profile.jpg") //si calgués canviar la foto
         }
 
         auth.currentUser!!.updateProfile(profileUpdates)
@@ -94,3 +94,10 @@ class Registro : AppCompatActivity() {
     }
 
     }
+
+
+/*
+db.collection("users").document(email).set(
+hashMapOf("name" to bin.Nombre.text.toString(),
+"password" to bin.contraId.text.toString())
+)*/
