@@ -2,13 +2,12 @@ package com.example.pantallasapp.Fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
-import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.pantallasapp.Activity.ListAdapter
+import com.example.pantallasapp.Adapters.ListAdapter
 import com.example.pantallasapp.R
 import com.example.pantallasapp.databinding.FragmentEventosBinding
 
@@ -30,6 +29,8 @@ class Fragment_eventos : Fragment() {
         initRecyclerView()
         bin.mostrarMyEvents.setOnClickListener{
             Navigation.findNavController(it).navigate(R.id.action_fragment_eventos_to_fragment_mis_eventos)
+        }
+        bin.apply {
 
         }
     }
@@ -38,9 +39,6 @@ class Fragment_eventos : Fragment() {
 
         super.onCreate(savedInstanceState)
         _bin = FragmentEventosBinding.inflate(layoutInflater)
-        bin.mostrarMyEvents.setOnClickListener(){
-
-        }
 
     }
 
@@ -63,34 +61,40 @@ class Fragment_eventos : Fragment() {
         lista.add(
             ListaMenu(
                 "Concierto Techno",
-                "https://media.resources.festicket.com/www/magazine/Techno_L_UiNUh4Q.jpg"
+                "https://media.resources.festicket.com/www/magazine/Techno_L_UiNUh4Q.jpg",
+                "geo:41.567067, 1.999756"
             )
         )
         lista.add(
            ListaMenu(
                 "Festa Major Terrassa",
-                "https://www.alleventshotels.com/wp-content/uploads/2018/08/festa-major.jpg"
+                "https://www.alleventshotels.com/wp-content/uploads/2018/08/festa-major.jpg",
+                "geo:41.578669, 2.035128"
             )
         )
         lista.add(
            ListaMenu(
                 "Taller modernista",
-                "https://www.ruidophoto.com/media/post/Taller5-10-5_E5Wg3Z0.jpg"
+                "https://www.ruidophoto.com/media/post/Taller5-10-5_E5Wg3Z0.jpg",
+                "geo:41.582542, 2.012846"
             )
         )
 
         return lista
     }
 
-    data class ListaMenu(val item: String, val photo: String) {
+    data class ListaMenu(val item: String, val photo: String, val link: String) {
         var eventName: String? = null
         var eventPhoto: String? = null
+        var eventUri: String? = null
 
         init {
             this.eventName = item
             this.eventPhoto = photo
+            this.eventUri = link
         }
     }
+
 }
 
 

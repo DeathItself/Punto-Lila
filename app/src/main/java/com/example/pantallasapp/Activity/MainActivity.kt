@@ -24,9 +24,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        binding.root.setOnClickListener{
-            showMap(uri)
-        }
+
 
     }
 
@@ -83,14 +81,5 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    fun showMap(geoLocation: Uri) {
 
-        val intent = Intent(Intent.ACTION_VIEW).apply {
-            data = geoLocation
-        }
-        if (intent.resolveActivity(packageManager) != null) {
-            startActivity(intent)
-        }
-
-    }
 }
