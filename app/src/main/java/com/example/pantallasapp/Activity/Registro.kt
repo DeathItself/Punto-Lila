@@ -1,5 +1,6 @@
 package com.example.pantallasapp.Activity
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -65,6 +66,7 @@ class Registro : AppCompatActivity() {
                 if (task.isSuccessful) {
                     Log.d(TAG, "createUserWithEmail:success")
                     if( nom.length > 1 ) posaNomUser( nom )
+                    goHome()
                 } else {
 
                     Log.w(TAG, "createUserWithEmail:failure", task.exception)
@@ -86,6 +88,7 @@ class Registro : AppCompatActivity() {
                     Log.d(TAG, "User profile updated.")
                     agregarDatos()
                     reload()
+
                 }
             }
 
@@ -103,6 +106,10 @@ class Registro : AppCompatActivity() {
 
                 }
         }
+    private fun goHome() {
+        val intent = Intent(this, MainActivity::class.java)
+        startActivity(intent)
+    }
     }
 
 
