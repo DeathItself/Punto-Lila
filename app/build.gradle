@@ -71,5 +71,5 @@ dependencies {
     implementation 'androidx.databinding:viewbinding:7.2.2'
     implementation "io.coil-kt:coil:1.1.1"
     implementation platform('com.google.firebase:firebase-bom:31.0.2')
-    implementation 'com.google.firebase:firebase-firestore-ktx'
+    implementation 'com.google.firebase:firebase-firestore:24.1.2'
 }
