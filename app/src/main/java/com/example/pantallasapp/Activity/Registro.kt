@@ -1,4 +1,4 @@
-package com.example.pantallasapp
+package com.example.pantallasapp.Activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -8,12 +8,14 @@ import com.example.pantallasapp.databinding.ActivityRegistroBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.auth.ktx.userProfileChangeRequest
+import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.ktx.Firebase
 
 class Registro : AppCompatActivity() {
 
     private lateinit var bin: ActivityRegistroBinding
     private lateinit var auth: FirebaseAuth
+    private val db = FirebaseFirestore.getInstance()
 
     private companion object {
         private const val TAG = "Login"
@@ -25,7 +27,6 @@ class Registro : AppCompatActivity() {
         bin = ActivityRegistroBinding.inflate(layoutInflater)
         setContentView(bin.root)
 
-        // Initialize Firebase Auth
         auth = Firebase.auth
 
 
@@ -35,20 +36,18 @@ class Registro : AppCompatActivity() {
                 bin.Nombre.text.toString(),
                 bin.contraId.text.toString()
             )
-
         }
     }
 
     public override fun onStart() {
         super.onStart()
-        // Check if user is signed in (non-null) and update UI accordingly.
         val currentUser = auth.currentUser
         currentUser?.let {
             reload();
         }
     }
 
-    private fun reload() { //quan canviem/entrem en un usuari amb l'aplicació
+    private fun reload() {
         val user = auth.currentUser
 
         user?.let {
@@ -63,13 +62,10 @@ class Registro : AppCompatActivity() {
         auth.createUserWithEmailAndPassword(email, password)
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
-                    // Sign in success, update UI with the signed-in user's information
                     Log.d(TAG, "createUserWithEmail:success")
-                    val user = auth.currentUser
                     if( nom.length > 1 ) posaNomUser( nom )
-                    finish()
                 } else {
-                    // If sign in fails, display a message to the user.
+
                     Log.w(TAG, "createUserWithEmail:failure", task.exception)
                     Toast.makeText(baseContext, "Authentication failed.", Toast.LENGTH_SHORT).show()
                     reload()
@@ -77,20 +73,42 @@ class Registro : AppCompatActivity() {
             }
     }
 
-    // https://firebase.google.com/docs/auth/android/manage-users --> com canviar altres parametres
-    private fun posaNomUser( nom: String ) { //canvia el perfil de l'usuari
+
+    private fun posaNomUser( nom: String ) {
         val profileUpdates = userProfileChangeRequest {
             displayName = nom
-            //photoUri = Uri.parse("https://example.com/jane-q-user/profile.jpg") //si calgués canviar la foto
         }
 
         auth.currentUser!!.updateProfile(profileUpdates)
             .addOnCompleteListener { task ->
                 if (task.isSuccessful) {
                     Log.d(TAG, "User profile updated.")
+                    agregarDatos()
                     reload()
-                } //es podria fer alguna cosa si donés error al canviar
+                }
             }
-    }
 
     }
+
+    private fun agregarDatos() {
+            val userdates = hashMapOf(
+                "name" to bin.Nombre.text.toString(),
+                "password" to bin.contraId.text.toString()
+            )
+
+            db.collection("usuarios").document(auth.currentUser!!.uid).set(userdates)
+                .addOnSuccessListener { Log.d("TAG", "Se ha guardado correctamente") }
+                .addOnFailureListener{e -> Log.w("TAG", "error $e")
+
+                }
+        }
+    }
+
+
+
+
+/*
+db.collection("users").document(email).set(
+hashMapOf("name" to bin.Nombre.text.toString(),
+"password" to bin.contraId.text.toString())
+)*/
