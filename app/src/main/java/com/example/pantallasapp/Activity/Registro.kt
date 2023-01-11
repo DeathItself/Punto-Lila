@@ -59,6 +59,7 @@ class Registro : AppCompatActivity() {
     }
 
     private fun crearUsuari(email: String, nom: String, password: String) {
+        Log.d(TAG,"Creacion usuario: $email, $nom, $password")
         auth.createUserWithEmailAndPassword(email, password)
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
