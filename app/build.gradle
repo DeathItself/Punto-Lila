@@ -72,4 +72,5 @@ dependencies {
     implementation "io.coil-kt:coil:1.1.1"
     implementation platform('com.google.firebase:firebase-bom:31.0.2')
     implementation 'com.google.firebase:firebase-firestore:24.1.2'
+    implementation 'androidx.core:core:1.0.0'
 }
