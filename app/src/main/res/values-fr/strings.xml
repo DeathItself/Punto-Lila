@@ -28,4 +28,8 @@
     <string name="name">Nom</string>
     <string name="recuperarCuenta">Récupérer le compte</string>
     <string name="activista">Activiste</string>
+    <string name="channel_name">Formulaire envoyé</string>
+    <string name="channel_description">Le formulaire a été soumis avec succès.</string>
+    <string name="formulari">Envoyer le formulaire</string>
+    <string name="textFormulari">Pour devenir militant, vous devrez remplir un formulaire en appuyant sur le bouton suivant</string>
 </resources>
