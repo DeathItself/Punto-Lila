@@ -28,4 +28,8 @@
     <string name="name">Name</string>
     <string name="recuperarCuenta">Account wiederherstellen</string>
     <string name="activista">Aktivist</string>
+    <string name="channel_name">Formular gesendet</string>
+    <string name="channel_description">Das Formular wurde erfolgreich übermittelt.</string>
+    <string name="formulari">Sende Formular</string>
+    <string name="textFormulari">Um ein Aktivist zu werden, müssen Sie ein Formular ausfüllen, indem Sie auf die folgende Schaltfläche klicken</string>
 </resources>
