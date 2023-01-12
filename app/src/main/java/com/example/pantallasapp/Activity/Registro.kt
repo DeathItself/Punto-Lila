@@ -1,5 +1,6 @@
 package com.example.pantallasapp.Activity
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -43,20 +44,10 @@ class Registro : AppCompatActivity() {
         super.onStart()
         val currentUser = auth.currentUser
         currentUser?.let {
-            reload();
+
         }
     }
 
-    private fun reload() {
-        val user = auth.currentUser
-
-        user?.let {
-            val nom = user.displayName ?:run{"sense nom"}
-            bin.Nombre.setHint("Usuari email: ${user.email}\n$nom")
-        } ?: run {
-            bin.Nombre.setHint("Usuari: no assignat")
-        }
-    }
 
     private fun crearUsuari(email: String, nom: String, password: String) {
         Log.d(TAG,"Creacion usuario: $email, $nom, $password")
@@ -65,11 +56,12 @@ class Registro : AppCompatActivity() {
                 if (task.isSuccessful) {
                     Log.d(TAG, "createUserWithEmail:success")
                     if( nom.length > 1 ) posaNomUser( nom )
+                    goHome()
                 } else {
 
                     Log.w(TAG, "createUserWithEmail:failure", task.exception)
                     Toast.makeText(baseContext, "Authentication failed.", Toast.LENGTH_SHORT).show()
-                    reload()
+
                 }
             }
     }
@@ -85,7 +77,8 @@ class Registro : AppCompatActivity() {
                 if (task.isSuccessful) {
                     Log.d(TAG, "User profile updated.")
                     agregarDatos()
-                    reload()
+
+
                 }
             }
 
@@ -103,13 +96,8 @@ class Registro : AppCompatActivity() {
 
                 }
         }
+    private fun goHome() {
+        val intent = Intent(this, MainActivity::class.java)
+        startActivity(intent)
     }
-
-
-
-
-/*
-db.collection("users").document(email).set(
-hashMapOf("name" to bin.Nombre.text.toString(),
-"password" to bin.contraId.text.toString())
-)*/
+}

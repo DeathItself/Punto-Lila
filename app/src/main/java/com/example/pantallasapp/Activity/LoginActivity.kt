@@ -84,10 +84,10 @@ class LoginActivity : AppCompatActivity() {
 
 /*Si se olvido de la contraseña lo enviaremos en la siguiente actividad*/
 
-//fun forgotPassword(view: View) {
-// startActivity(Intent(this,
-//    activity_recuperar_psw::class.java))
-// }
+    fun fpswrec(view: View) {
+        intent = Intent(this, RecupPsw::class.java)
+        startActivity(intent)
+    }
 
 /*Si quiere registrarse lo enviaremos en la siguiente actividad*/
 

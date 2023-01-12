@@ -4,9 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".FragmentRecuperarPassword"
+    tools:context=".Activity.RecupPsw"
     android:background="@color/Purpura">
-
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/Recuperarnombre"
@@ -57,5 +56,5 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.571" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
 
+</androidx.constraintlayout.widget.ConstraintLayout>
