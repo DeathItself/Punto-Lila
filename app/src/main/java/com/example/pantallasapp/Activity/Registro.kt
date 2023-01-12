@@ -44,20 +44,10 @@ class Registro : AppCompatActivity() {
         super.onStart()
         val currentUser = auth.currentUser
         currentUser?.let {
-            reload();
+
         }
     }
 
-    private fun reload() {
-        val user = auth.currentUser
-
-        user?.let {
-            val nom = user.displayName ?:run{"sense nom"}
-            bin.Nombre.setHint("Usuari email: ${user.email}\n$nom")
-        } ?: run {
-            bin.Nombre.setHint("Usuari: no assignat")
-        }
-    }
 
     private fun crearUsuari(email: String, nom: String, password: String) {
         Log.d(TAG,"Creacion usuario: $email, $nom, $password")
@@ -71,7 +61,7 @@ class Registro : AppCompatActivity() {
 
                     Log.w(TAG, "createUserWithEmail:failure", task.exception)
                     Toast.makeText(baseContext, "Authentication failed.", Toast.LENGTH_SHORT).show()
-                    reload()
+
                 }
             }
     }
@@ -87,7 +77,7 @@ class Registro : AppCompatActivity() {
                 if (task.isSuccessful) {
                     Log.d(TAG, "User profile updated.")
                     agregarDatos()
-                    reload()
+
 
                 }
             }
@@ -110,13 +100,4 @@ class Registro : AppCompatActivity() {
         val intent = Intent(this, MainActivity::class.java)
         startActivity(intent)
     }
-    }
-
-
-
-
-/*
-db.collection("users").document(email).set(
-hashMapOf("name" to bin.Nombre.text.toString(),
-"password" to bin.contraId.text.toString())
-)*/
+}
