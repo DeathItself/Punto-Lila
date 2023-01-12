@@ -28,7 +28,7 @@
     <string name="name">Nom</string>
     <string name="recuperarCuenta">Recuperar Compte</string>
     <string name="channel_name">Formulari Enviat</string>
-    <string name="channel_description">El formulari ha sigut enviat correctament.</string>
+    <string name="channel_description">El formulari ha sigut obert</string>
     <string name="formulari">Enviar Formulari</string>
     <string name="textFormulari">Per poder ser activista, hauràs d\'omplir un formulari apretant el següent botó</string>
 </resources>

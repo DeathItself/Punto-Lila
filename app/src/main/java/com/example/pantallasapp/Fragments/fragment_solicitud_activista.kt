@@ -9,21 +9,26 @@ import android.view.ViewGroup
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
 import androidx.fragment.app.Fragment
-import androidx.navigation.Navigation
 import com.example.pantallasapp.Activity.MainActivity.Companion.CHANNEL_ID
 import com.example.pantallasapp.R
-import com.example.pantallasapp.databinding.FragmentEventosBinding
 import com.example.pantallasapp.databinding.FragmentSolicitudActivistaBinding
 
 class fragment_solicitud_activista : Fragment() {
     private var _bin: FragmentSolicitudActivistaBinding? = null
     private val bin get() = _bin!!
     private val _url = "https://forms.gle/ZNbssPTaP41rMzFA9"
-    private val notificationId = 0
+//    private val notification = NotificationManagerCompat.from(requireContext())
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         _bin = FragmentSolicitudActivistaBinding.inflate(layoutInflater)
+
+
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
 
         var builder = NotificationCompat.Builder(requireContext(), CHANNEL_ID).also {
             it.setSmallIcon(R.drawable.splash)
@@ -32,17 +37,11 @@ class fragment_solicitud_activista : Fragment() {
             it.setPriority(NotificationCompat.PRIORITY_HIGH)
         }.build()
 
-        val notification = NotificationManagerCompat.from(requireContext())
+
 
         bin.EnviarFormulari.setOnClickListener{
-            notification.notify(notificationId, builder)
-        }
-
-    }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        bin.EnviarFormulari.setOnClickListener{
+            val notification = NotificationManagerCompat.from(requireContext())
+            notification.notify(0, builder)
             val openURL = Intent(Intent.ACTION_VIEW)
             openURL.data = Uri.parse(_url)
             startActivity(openURL)
