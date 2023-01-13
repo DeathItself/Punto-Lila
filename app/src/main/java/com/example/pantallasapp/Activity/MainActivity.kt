@@ -1,8 +1,11 @@
 package com.example.pantallasapp.Activity
 
+import android.annotation.SuppressLint
 import android.app.NotificationChannel
 import android.app.NotificationManager
 import android.content.Context
+import android.content.Intent
+import android.content.SharedPreferences
 import android.graphics.Color
 import android.net.Uri
 import android.os.Build
@@ -20,8 +23,15 @@ import com.example.pantallasapp.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
+    private lateinit var PrefManager : PrefManager
+
     lateinit var binding: ActivityMainBinding
+
     val uri = Uri.parse("geo:41.56602039747692, 2.011540981764755")
+
+
+
+
 
     companion object {
         val CHANNEL_ID = "pantallasApp"
@@ -72,16 +82,17 @@ class MainActivity : AppCompatActivity() {
                 supportActionBar!!.title = "Solicitud Activista"
                 return true
             }
-            R.id.ajustes_usuario ->{
-                Toast.makeText(applicationContext, "click on ajustes usuario", Toast.LENGTH_LONG).show()
-                navController.navigate(R.id.action_global_fragment_ajustes_usuario)
-                supportActionBar!!.title = "Ajustes Usuario"
-                return true
-            }
             R.id.mis_eventos ->{
                 Toast.makeText(applicationContext, "click on mis eventos", Toast.LENGTH_LONG).show()
                 navController.navigate(R.id.action_global_fragment_Mis_Eventos)
                 supportActionBar!!.title = "Mis Eventos"
+                return true
+            }
+            R.id.logout ->{
+                PrefManager.removeData()
+                val intent = Intent(this, LoginActivity::class.java)
+                startActivity(intent)
+                finish()
                 return true
             }
             else -> super.onOptionsItemSelected(item)
