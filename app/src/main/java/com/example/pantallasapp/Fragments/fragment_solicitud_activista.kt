@@ -17,7 +17,7 @@ class fragment_solicitud_activista : Fragment() {
     private var _bin: FragmentSolicitudActivistaBinding? = null
     private val bin get() = _bin!!
     private val _url = "https://forms.gle/ZNbssPTaP41rMzFA9"
-//    private val notification = NotificationManagerCompat.from(requireContext())
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,18 +30,7 @@ class fragment_solicitud_activista : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
 
-        var builder = NotificationCompat.Builder(requireContext(), CHANNEL_ID).also {
-            it.setSmallIcon(R.drawable.splash)
-            it.setContentTitle(getString(R.string.channel_name))
-            it.setContentText(getString(R.string.channel_description))
-            it.setPriority(NotificationCompat.PRIORITY_HIGH)
-        }.build()
-
-
-
         bin.EnviarFormulari.setOnClickListener{
-            val notification = NotificationManagerCompat.from(requireContext())
-            notification.notify(0, builder)
             val openURL = Intent(Intent.ACTION_VIEW)
             openURL.data = Uri.parse(_url)
             startActivity(openURL)

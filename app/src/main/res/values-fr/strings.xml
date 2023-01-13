@@ -32,4 +32,5 @@
     <string name="channel_description">Le formulaire a été soumis avec succès.</string>
     <string name="formulari">Envoyer le formulaire</string>
     <string name="textFormulari">Pour devenir militant, vous devrez remplir un formulaire en appuyant sur le bouton suivant</string>
+    <string name="Nombre_Usuario">Nom d\'utilisateur</string>
 </resources>

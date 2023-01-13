@@ -32,4 +32,5 @@
     <string name="textoActivista">¿Quieres ser activista?</string>
     <string name="formulari">Enviar el formulario</string>
     <string name="textFormulari">Para poder ser activista, tendrás que rellenar un formulario pulsando el siguiente botón</string>
+    <string name="Nombre_Usuario">Nombre de usuario</string>
 </resources>
