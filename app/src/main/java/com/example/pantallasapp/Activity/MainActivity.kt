@@ -1,11 +1,10 @@
 package com.example.pantallasapp.Activity
 
-import android.annotation.SuppressLint
+
 import android.app.NotificationChannel
 import android.app.NotificationManager
 import android.content.Context
 import android.content.Intent
-import android.content.SharedPreferences
 import android.graphics.Color
 import android.net.Uri
 import android.os.Build
@@ -18,39 +17,41 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
 import com.example.pantallasapp.R
 import com.example.pantallasapp.databinding.ActivityMainBinding
-
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var PrefManager : PrefManager
+
+    private lateinit var auth: FirebaseAuth
 
     lateinit var binding: ActivityMainBinding
 
     val uri = Uri.parse("geo:41.56602039747692, 2.011540981764755")
 
 
-
-
-
     companion object {
         val CHANNEL_ID = "pantallasApp"
+        val PREF_NAME = "datosusuario"
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        auth = Firebase.auth
         createNotificationChannel()
 
     }
 
 
-        override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-            val inflater: MenuInflater = menuInflater
-            inflater.inflate(R.menu.menu, menu)
-            return true
-        }
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        val inflater: MenuInflater = menuInflater
+        inflater.inflate(R.menu.menu, menu)
+        return true
+    }
 
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
@@ -64,32 +65,37 @@ class MainActivity : AppCompatActivity() {
                 supportActionBar!!.title = "Eventos"
                 return true
             }
-            R.id.recursos ->{
+            R.id.recursos -> {
                 Toast.makeText(applicationContext, "click on recursos", Toast.LENGTH_LONG).show()
                 navController.navigate(R.id.action_global_fragment_recursos)
                 supportActionBar!!.title = "Recursos"
                 return true
             }
-            R.id.puntos_lila ->{
+            R.id.puntos_lila -> {
                 Toast.makeText(applicationContext, "click on puntos lila", Toast.LENGTH_LONG).show()
                 navController.navigate(R.id.action_global_fragment_puntoslila)
                 supportActionBar!!.title = "Puntos Lila"
                 return true
             }
-            R.id.activista ->{
+            R.id.activista -> {
                 Toast.makeText(applicationContext, "click on activista", Toast.LENGTH_LONG).show()
                 navController.navigate(R.id.action_global_fragment_solicitud_activista2)
                 supportActionBar!!.title = "Solicitud Activista"
                 return true
             }
-            R.id.mis_eventos ->{
+            R.id.mis_eventos -> {
                 Toast.makeText(applicationContext, "click on mis eventos", Toast.LENGTH_LONG).show()
                 navController.navigate(R.id.action_global_fragment_Mis_Eventos)
                 supportActionBar!!.title = "Mis Eventos"
                 return true
             }
-            R.id.logout ->{
-                PrefManager.removeData()
+            R.id.logout -> {
+                if (auth.currentUser != null) {
+                    val prefs = getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE)
+                    val editor = prefs.edit()
+                    editor.putString("emailusuario", auth.currentUser!!.email)
+                    editor.commit()
+                }
                 val intent = Intent(this, LoginActivity::class.java)
                 startActivity(intent)
                 finish()
@@ -117,7 +123,6 @@ class MainActivity : AppCompatActivity() {
             notificationManager.createNotificationChannel(channel)
         }
     }
-
 
 
 }
