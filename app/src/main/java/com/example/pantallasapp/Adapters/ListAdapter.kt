@@ -52,6 +52,7 @@ class ListAdapter: RecyclerView.Adapter<ListAdapter.ListViewHolder>(){
             boton2.setOnClickListener{
                 val direction = Fragment_eventosDirections.actionFragmentEventosToFragmentMisEventos(eventosApuntado = item.eventName.toString())
                 holder.itemView.findNavController().navigate(direction)
+
             }
         }
     }

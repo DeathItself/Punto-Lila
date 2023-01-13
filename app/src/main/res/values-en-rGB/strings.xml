@@ -32,4 +32,5 @@
     <string name="channel_description">The form has been successfully submitted.</string>
     <string name="formulari">Send Form</string>
     <string name="textFormulari">In order to become an activist, you will have to fill out a form by pressing the following button</string>
+    <string name="Nombre_Usuario">Username</string>
 </resources>

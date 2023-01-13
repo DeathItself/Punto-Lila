@@ -32,4 +32,5 @@
     <string name="channel_description">Das Formular wurde erfolgreich übermittelt.</string>
     <string name="formulari">Sende Formular</string>
     <string name="textFormulari">Um ein Aktivist zu werden, müssen Sie ein Formular ausfüllen, indem Sie auf die folgende Schaltfläche klicken</string>
+    <string name="Nombre_Usuario">Nutzername</string>
 </resources>
