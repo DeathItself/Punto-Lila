@@ -13,9 +13,11 @@ import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
+import com.example.pantallasapp.Adapters.ListAdapter
 import com.example.pantallasapp.R
 import com.example.pantallasapp.databinding.ActivityMainBinding
-
+import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.ktx.Firebase
 
 
 class MainActivity : AppCompatActivity() {

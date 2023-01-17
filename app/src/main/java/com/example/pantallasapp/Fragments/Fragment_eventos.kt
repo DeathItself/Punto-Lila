@@ -10,6 +10,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.pantallasapp.Adapters.ListAdapter
 import com.example.pantallasapp.R
 import com.example.pantallasapp.databinding.FragmentEventosBinding
+import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.ktx.toObject
 
 class Fragment_eventos : Fragment() {
     private var _bin: FragmentEventosBinding? = null
@@ -27,11 +29,19 @@ class Fragment_eventos : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initRecyclerView()
-        bin.mostrarMyEvents.setOnClickListener{
-            Navigation.findNavController(it).navigate(R.id.action_fragment_eventos_to_fragment_mis_eventos)
+        val db = FirebaseFirestore.getInstance()
+        val query = db.collection("Eventos")
+        query.get().addOnSuccessListener { result ->
+            val lista: MutableList<ListaMenu> = arrayListOf()
+            for (document in result) {
+                val item = document.toObject(ListaMenu::class.java)
+                lista.add(item)
+            }
+            myAdapter.ListaRecyclerAdapter(lista, requireContext())
+            myAdapter.notifyDataSetChanged()
         }
-        bin.apply {
-
+            bin.mostrarMyEvents.setOnClickListener{
+            Navigation.findNavController(it).navigate(R.id.action_fragment_eventos_to_fragment_mis_eventos)
         }
     }
 
@@ -58,28 +68,6 @@ class Fragment_eventos : Fragment() {
 
     private fun getList(): MutableList<ListaMenu>{
         val lista: MutableList<ListaMenu> = arrayListOf()
-        lista.add(
-            ListaMenu(
-                "Concierto Techno",
-                "https://media.resources.festicket.com/www/magazine/Techno_L_UiNUh4Q.jpg",
-                "geo:41.567067, 1.999756"
-            )
-        )
-        lista.add(
-           ListaMenu(
-                "Festa Major Terrassa",
-                "https://www.alleventshotels.com/wp-content/uploads/2018/08/festa-major.jpg",
-                "geo:41.578669, 2.035128"
-            )
-        )
-        lista.add(
-           ListaMenu(
-                "Taller modernista",
-                "https://www.ruidophoto.com/media/post/Taller5-10-5_E5Wg3Z0.jpg",
-                "geo:41.582542, 2.012846"
-            )
-        )
-
         return lista
     }
 
