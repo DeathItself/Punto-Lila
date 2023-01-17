@@ -9,4 +9,6 @@
     <color name="white">#FFFFFFFF</color>
     <color name="Purpura">#BA59C9</color>
     <color name="Morado">#6A3475</color>
+    <color name="blue">#0000FF</color>
+    <color name="transparent">#00000000</color>
 </resources>

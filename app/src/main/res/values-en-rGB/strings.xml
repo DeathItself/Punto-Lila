@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Pantallas App</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="correo">Mail</string>
+    <string name="Password">Password</string>
+    <string name="registrar_se">Sign Up</string>
+    <string name="inicia_sessi">Login</string>
+    <string name="nombre_completo">Complete Name</string>
+    <string name="RepeatPassword">Repeat password</string>
+    <string name="insertar_dni">Insert ID</string>
+    <string name="chat">Write</string>
+    <string name="EventTitle">Events</string>
+    <string name="ButtonList">List</string>
+    <string name="ButtonMap">Map</string>
+    <string name="textoMenu">Menu</string>
+    <string name="Eventos">Events</string>
+    <string name="Charlas">Talks</string>
+    <string name="Recursos">Options</string>
+    <string name="PuntosLila">Purple points</string>
+    <string name="SolicitudActivista">Activist request</string>
+    <string name="AjustesUsu">User settings</string>
+    <string name="MisEvents">My events</string>
+    <string name="textoActivista">Want to be an activist?</string>
+    <string name="condiciones">I have read and accept the conditions of use and the Privacy Policy</string>
+    <string name="name">Name</string>
+    <string name="recuperarCuenta">Recover account</string>
+    <string name="activista">Activist</string>
+    <string name="channel_name">Form Sent</string>
+    <string name="channel_description">The form has been successfully submitted.</string>
+    <string name="formulari">Send Form</string>
+    <string name="textFormulari">In order to become an activist, you will have to fill out a form by pressing the following button</string>
+    <string name="Nombre_Usuario">Username</string>
+</resources>

@@ -9,25 +9,30 @@
         android:background="@color/Purpura">
 
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/ReciclerView2"
-        android:layout_width="400dp"
-        android:layout_height="400dp"
+    <TextView
+        android:id="@+id/eventosApuntado"
+        style="@style/Titulo"
+        android:layout_width="383dp"
+        android:layout_height="360dp"
+        android:background="@drawable/corner"
+        android:backgroundTint="@color/Morado"
+        android:text=""
+        android:textAlignment="center"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.454"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.356">
-
-    </androidx.recyclerview.widget.RecyclerView>
+        app:layout_constraintVertical_bias="0.381" />
 
     <TextView
         android:id="@+id/textView"
         style="@style/Titulo"
-        android:layout_width="152dp"
-        android:layout_height="39dp"
+        android:layout_width="169dp"
+        android:layout_height="64dp"
         android:background="@drawable/corner"
+        android:backgroundTint="@color/Morado"
         android:text="@string/MisEvents"
         android:textAlignment="center"
         android:textSize="24sp"
@@ -35,8 +40,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.071"
-        android:backgroundTint="@color/Morado"
-        />
+        app:layout_constraintVertical_bias="0.071" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

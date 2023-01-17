@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Écrans d\'application</string>
+    <string name="title_home">Début</string>
+    <string name="title_dashboard">Tableau de bord</string>
+    <string name="title_notifications">Avis</string>
+    <string name="correo">Courrier</string>
+    <string name="Password">Mot de passe</string>
+    <string name="registrar_se">Enregistrement</string>
+    <string name="inicia_sessi">Connexion</string>
+    <string name="nombre_completo">Nom complet</string>
+    <string name="RepeatPassword">Répéter le mot de passe</string>
+    <string name="insertar_dni">IDENTIFIANT</string>
+    <string name="chat">Écrire</string>
+    <string name="EventTitle">Événements</string>
+    <string name="ButtonList">Prêt</string>
+    <string name="ButtonMap">Carte</string>
+    <string name="textoMenu">Menu</string>
+    <string name="Eventos">Événements</string>
+    <string name="Charlas">Pourparlers</string>
+    <string name="Recursos">Moyens</string>
+    <string name="PuntosLila">Pointes lilas</string>
+    <string name="SolicitudActivista">Demande d\'activiste</string>
+    <string name="AjustesUsu">Paramètres utilisateur</string>
+    <string name="MisEvents">Mes événements</string>
+    <string name="textoActivista">Voulez-vous être un activiste?</string>
+    <string name="condiciones">J\'ai lu et j\'accepte les conditions d\'utilisation et la politique de confidentialité</string>
+    <string name="name">Nom</string>
+    <string name="recuperarCuenta">Récupérer le compte</string>
+    <string name="activista">Activiste</string>
+    <string name="channel_name">Formulaire envoyé</string>
+    <string name="channel_description">Le formulaire a été soumis avec succès.</string>
+    <string name="formulari">Envoyer le formulaire</string>
+    <string name="textFormulari">Pour devenir militant, vous devrez remplir un formulaire en appuyant sur le bouton suivant</string>
+    <string name="Nombre_Usuario">Nom d\'utilisateur</string>
+</resources>
