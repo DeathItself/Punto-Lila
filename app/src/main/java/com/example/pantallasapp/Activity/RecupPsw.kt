@@ -38,7 +38,7 @@ class RecupPsw : AppCompatActivity() {
         btnSend!!.setOnClickListener {
             sendPasswordResetEmail()
             val builder = NotificationCompat.Builder(this, MainActivity.CHANNEL_ID).also {
-                it.setSmallIcon(R.drawable.splash)
+                it.setSmallIcon(R.drawable.ic_app)
                 it.setContentTitle(getString(R.string.channel_name))
                 it.setContentText(getString(R.string.channel_description))
                 it.setPriority(NotificationCompat.PRIORITY_HIGH)

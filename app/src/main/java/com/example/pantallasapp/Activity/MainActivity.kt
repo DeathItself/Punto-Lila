@@ -4,7 +4,6 @@ import android.app.NotificationChannel
 import android.app.NotificationManager
 import android.content.Context
 import android.graphics.Color
-import android.net.Uri
 import android.os.Build
 import android.os.Bundle
 import android.view.Menu
@@ -13,17 +12,13 @@ import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
-import com.example.pantallasapp.Adapters.ListAdapter
 import com.example.pantallasapp.R
 import com.example.pantallasapp.databinding.ActivityMainBinding
-import com.google.firebase.firestore.FirebaseFirestore
-import com.google.firebase.ktx.Firebase
 
 
 class MainActivity : AppCompatActivity() {
 
     lateinit var binding: ActivityMainBinding
-    val uri = Uri.parse("geo:41.56602039747692, 2.011540981764755")
 
     companion object {
         val CHANNEL_ID = "pantallasApp"
@@ -38,11 +33,11 @@ class MainActivity : AppCompatActivity() {
     }
 
 
-        override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-            val inflater: MenuInflater = menuInflater
-            inflater.inflate(R.menu.menu, menu)
-            return true
-        }
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        val inflater: MenuInflater = menuInflater
+        inflater.inflate(R.menu.menu, menu)
+        return true
+    }
 
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
