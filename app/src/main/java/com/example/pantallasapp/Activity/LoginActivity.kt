@@ -1,5 +1,6 @@
 package com.example.pantallasapp.Activity
 
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -35,13 +36,18 @@ class LoginActivity : AppCompatActivity() {
         etEmail = findViewById(R.id.correoId)
         etPassword = findViewById(R.id.contraId)
         mAuth = FirebaseAuth.getInstance()
+        val prefs = getSharedPreferences(MainActivity.PREF_NAME, Context.MODE_PRIVATE)
+        val mailstr = prefs.getString("emailusuario","")
+        etEmail.setText(mailstr)
     }
 
-//Ahora vamos a Iniciar sesión con firebase es muy sencillo
+//Ahora vamos a Iniciar sesión con firebase
 
     private fun loginUser() {
         //Obtenemos usuario y contraseña
         email = etEmail.text.toString()
+
+
         password = etPassword.text.toString()
         //Verificamos que los campos no este vacios
         if (!TextUtils.isEmpty(email) && !TextUtils.isEmpty(password)) {

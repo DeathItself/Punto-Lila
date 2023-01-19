@@ -15,9 +15,9 @@
         android:id="@+id/activista"
         android:title="@string/activista" />
     <item
-        android:id="@+id/ajustes_usuario"
-        android:title="@string/AjustesUsu" />
-    <item
         android:id="@+id/mis_eventos"
         android:title="@string/MisEvents" />
+    <item
+        android:id="@+id/logout"
+        android:title="@string/CerrarSesion" />
 </menu>
