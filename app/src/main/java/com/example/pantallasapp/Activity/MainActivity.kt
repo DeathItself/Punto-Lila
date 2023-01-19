@@ -6,7 +6,6 @@ import android.app.NotificationManager
 import android.content.Context
 import android.content.Intent
 import android.graphics.Color
-import android.net.Uri
 import android.os.Build
 import android.os.Bundle
 import android.view.Menu
@@ -21,15 +20,12 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 
-
 class MainActivity : AppCompatActivity() {
 
 
     private lateinit var auth: FirebaseAuth
 
     lateinit var binding: ActivityMainBinding
-
-    val uri = Uri.parse("geo:41.56602039747692, 2.011540981764755")
 
 
     companion object {

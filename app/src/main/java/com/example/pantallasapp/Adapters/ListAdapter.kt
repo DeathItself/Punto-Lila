@@ -49,6 +49,11 @@ class ListAdapter: RecyclerView.Adapter<ListAdapter.ListViewHolder>(){
         }
         binding.apply {
             boton2.setOnClickListener{
+                val sharedPreferences = context.getSharedPreferences("eventosApuntado", Context.MODE_PRIVATE)
+                val editor = sharedPreferences.edit()
+                editor.putString("eventosApuntado", item.eventName)
+                editor.apply()
+
                 val direction = Fragment_eventosDirections.actionFragmentEventosToFragmentMisEventos(eventosApuntado = item.eventName.toString())
                 holder.itemView.findNavController().navigate(direction)
 
@@ -73,6 +78,5 @@ class ListAdapter: RecyclerView.Adapter<ListAdapter.ListViewHolder>(){
         context.startActivity(intent)
 
     }
-
 
 }
