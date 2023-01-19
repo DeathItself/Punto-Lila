@@ -10,11 +10,13 @@
         <entry key="..\:/Users/Alfred/AndroidStudioProjects/punt_lila/app/src/main/res/layout/fragment_blank.xml" value="0.1" />
         <entry key="..\:/Users/Alfred/AndroidStudioProjects/punt_lila/app/src/main/res/layout/fragment_charlas.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Alfred/AndroidStudioProjects/punt_lila/app/src/main/res/layout/fragment_charlas2.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Alfred/AndroidStudioProjects/punt_lila/app/src/main/res/layout/fragment_chat.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Alfred/AndroidStudioProjects/punt_lila/app/src/main/res/layout/fragment_conciertos.xml" value="0.22826086956521738" />
         <entry key="..\:/Users/Alfred/AndroidStudioProjects/punt_lila/app/src/main/res/layout/fragment_dashboard.xml" value="0.22826086956521738" />
         <entry key="..\:/Users/Alfred/AndroidStudioProjects/punt_lila/app/src/main/res/layout/fragment_eventos.xml" value="0.2" />
         <entry key="..\:/Users/Alfred/AndroidStudioProjects/punt_lila/app/src/main/res/layout/fragment_eventos2.xml" value="0.1" />
         <entry key="..\:/Users/Alfred/AndroidStudioProjects/punt_lila/app/src/main/res/layout/fragment_home.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/Alfred/AndroidStudioProjects/punt_lila/app/src/main/res/layout/fragment_item_mensaje.xml" value="0.24010416666666667" />
         <entry key="..\:/Users/Alfred/AndroidStudioProjects/punt_lila/app/src/main/res/layout/fragment_menu.xml" value="0.1" />
         <entry key="..\:/Users/Alfred/AndroidStudioProjects/punt_lila/app/src/main/res/layout/fragment_notifications.xml" value="0.22826086956521738" />
         <entry key="..\:/Users/Alfred/AndroidStudioProjects/punt_lila/app/src/main/res/layout/fragment_pantalla_registro.xml" value="0.22826086956521738" />
@@ -22,6 +24,8 @@
         <entry key="..\:/Users/Alfred/AndroidStudioProjects/punt_lila/app/src/main/res/layout/fragment_recuperar_password.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Alfred/AndroidStudioProjects/punt_lila/app/src/main/res/layout/fragment_recursos.xml" value="0.24010416666666667" />
         <entry key="..\:/Users/Alfred/AndroidStudioProjects/punt_lila/app/src/main/res/layout/fragment_solicitud_activista.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Alfred/AndroidStudioProjects/punt_lila/app/src/main/res/layout/item_chat.xml" value="0.253125" />
+        <entry key="..\:/Users/Alfred/AndroidStudioProjects/punt_lila/app/src/main/res/layout/list_eventos.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Alfred/AndroidStudioProjects/punt_lila/app/src/main/res/layout/list_item.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Alfred/AndroidStudioProjects/punt_lila/app/src/main/res/layout/login_activity.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Alfred/AndroidStudioProjects/punt_lila/app/src/main/res/layout/recup_passw_activity.xml" value="0.253125" />

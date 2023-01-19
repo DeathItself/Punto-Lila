@@ -11,7 +11,7 @@ import com.example.pantallasapp.Adapters.ListAdapter
 import com.example.pantallasapp.R
 import com.example.pantallasapp.databinding.FragmentEventosBinding
 
-class Fragment_eventos : Fragment() {
+class FragmentEventos : Fragment() {
     private var _bin: FragmentEventosBinding? = null
     private val bin get() = _bin!!
     private val myAdapter: ListAdapter = ListAdapter()

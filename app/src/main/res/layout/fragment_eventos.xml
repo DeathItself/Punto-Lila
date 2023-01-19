@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:layout_width="match_parent"
     android:orientation="vertical"
-    tools:context=".Fragments.Fragment_eventos"
+    tools:context=".Fragments.FragmentEventos"
     android:background="@color/Purpura">
 
 
