@@ -13,7 +13,7 @@ import com.example.pantallasapp.Activity.MainActivity.Companion.CHANNEL_ID
 import com.example.pantallasapp.R
 import com.example.pantallasapp.databinding.FragmentSolicitudActivistaBinding
 
-class fragment_solicitud_activista : Fragment() {
+class FragmentSolicitudActivista : Fragment() {
     private var _bin: FragmentSolicitudActivistaBinding? = null
     private val bin get() = _bin!!
     private val _url = "https://forms.gle/ZNbssPTaP41rMzFA9"

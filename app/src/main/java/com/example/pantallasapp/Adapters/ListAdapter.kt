@@ -9,16 +9,15 @@ import android.widget.Toast
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
-import com.example.pantallasapp.Fragments.Fragment_eventos
-import com.example.pantallasapp.Fragments.Fragment_eventosDirections
+import com.example.pantallasapp.Fragments.FragmentEventos
 import com.example.pantallasapp.databinding.ListEventosBinding
 
 class ListAdapter: RecyclerView.Adapter<ListAdapter.ListViewHolder>(){
-    var lista:MutableList<Fragment_eventos.ListaMenu> = ArrayList()
+    var lista:MutableList<FragmentEventos.ListaMenu> = ArrayList()
     lateinit var context: Context
     private lateinit var binding: ListEventosBinding
 
-    fun ListaRecyclerAdapter(list:MutableList<Fragment_eventos.ListaMenu>, context: Context){
+    fun ListaRecyclerAdapter(list:MutableList<FragmentEventos.ListaMenu>, context: Context){
         this.lista = list
         this.context = context
     }
@@ -63,7 +62,7 @@ class ListAdapter: RecyclerView.Adapter<ListAdapter.ListViewHolder>(){
     }
 
     class ListViewHolder(val binding: ListEventosBinding): RecyclerView.ViewHolder(binding.root){
-        fun bind(lista: Fragment_eventos.ListaMenu) {}
+        fun bind(lista: FragmentEventos.ListaMenu) {}
     }
 
 

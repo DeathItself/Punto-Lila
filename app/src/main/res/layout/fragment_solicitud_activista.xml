@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Fragments.fragment_solicitud_activista"
+    tools:context=".Fragments.FragmentSolicitudActivista"
     android:background="@color/Purpura"
     android:backgroundTint="@color/Purpura"
     >
