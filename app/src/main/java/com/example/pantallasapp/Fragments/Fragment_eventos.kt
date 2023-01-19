@@ -1,5 +1,6 @@
 package com.example.pantallasapp.Fragments
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -72,6 +73,7 @@ class Fragment_eventos : Fragment() {
     }
 
 
+    @SuppressLint("SuspiciousIndentation")
     private fun getList() {
         val lista: MutableList<ListaMenu> = arrayListOf()
             db.collection("Eventos")

@@ -1,5 +1,6 @@
 package com.example.pantallasapp.Fragments
 
+import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -24,7 +25,6 @@ class fragmentMisEventos : Fragment() {
                 nombreEvento = it.getString("eventosApuntado")
             }
     }
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -36,8 +36,11 @@ class fragmentMisEventos : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-            binding.eventosApuntado.text = nombreEvento
 
+        val sharedPreferences = requireContext().getSharedPreferences("eventosApuntado", Context.MODE_PRIVATE)
+        nombreEvento = sharedPreferences.getString("eventosApuntado", "")
+        binding.eventosApuntado.text = nombreEvento
     }
+
 
 }
