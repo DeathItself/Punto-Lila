@@ -41,9 +41,9 @@
     <TextView
         android:id="@+id/textView4"
         style="@style/Titulo"
-        android:layout_width="372dp"
-        android:layout_height="98dp"
-        android:background="@drawable/corner"
+        android:layout_width="412dp"
+        android:layout_height="76dp"
+        android:background="@color/Morado"
         android:backgroundTint="@color/Morado"
         android:text="@string/textFormulari"
         android:textAlignment="center"
