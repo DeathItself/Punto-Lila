@@ -12,8 +12,8 @@
     <TextView
         android:id="@+id/eventosApuntado"
         style="@style/Titulo"
-        android:layout_width="383dp"
-        android:layout_height="360dp"
+        android:layout_width="366dp"
+        android:layout_height="190dp"
         android:background="@drawable/corner"
         android:backgroundTint="@color/Morado"
         android:text=""
@@ -21,6 +21,7 @@
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.488"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.423" />
