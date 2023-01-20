@@ -10,7 +10,7 @@ import com.example.pantallasapp.R
 import com.example.pantallasapp.databinding.FragmentMisEventosBinding
 
 
-class fragmentMisEventos : Fragment() {
+class FragmentMisEventos : Fragment() {
 
     private var _binding: FragmentMisEventosBinding? = null
 

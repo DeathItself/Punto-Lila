@@ -6,7 +6,7 @@
     app:startDestination="@id/fragment_eventos">
     <fragment
         android:id="@+id/fragment_eventos"
-        android:name="com.example.pantallasapp.Fragments.Fragment_eventos"
+        android:name="com.example.pantallasapp.Fragments.FragmentEventos"
         android:label="fragment_eventos"
         tools:layout="@layout/fragment_eventos" >
         <action
@@ -20,12 +20,12 @@
         tools:layout="@layout/fragment_recursos" />
     <fragment
         android:id="@+id/fragment_puntoslila"
-        android:name="com.example.pantallasapp.Fragments.fragment_puntoslila"
+        android:name="com.example.pantallasapp.Fragments.FragmentPuntosLila"
         android:label="fragment_puntoslila"
         tools:layout="@layout/fragment_puntoslila" />
     <fragment
         android:id="@+id/fragment_solicitud_activista2"
-        android:name="com.example.pantallasapp.Fragments.fragment_solicitud_activista"
+        android:name="com.example.pantallasapp.Fragments.FragmentSolicitudActivista"
         android:label="fragment_solicitud_activista"
         tools:layout="@layout/fragment_solicitud_activista" />
     <fragment
@@ -35,7 +35,7 @@
         tools:layout="@layout/fragment_ajustes_usuario" />
     <fragment
         android:id="@+id/fragment_mis_eventos"
-        android:name="com.example.pantallasapp.Fragments.fragmentMisEventos"
+        android:name="com.example.pantallasapp.Fragments.FragmentMisEventos"
         android:label="fragment_Mis_Eventos"
         tools:layout="@layout/fragment_mis_eventos">
     <argument

@@ -16,7 +16,7 @@ import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.firestore.ktx.toObject
 import com.google.firebase.ktx.Firebase
 
-class Fragment_eventos : Fragment() {
+class FragmentEventos : Fragment() {
     private var _bin: FragmentEventosBinding? = null
     private val bin get() = _bin!!
     private val myAdapter: ListAdapter = ListAdapter()
