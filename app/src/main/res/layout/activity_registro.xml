@@ -86,7 +86,7 @@
         android:layout_width="185dp"
         android:layout_height="56dp"
         android:backgroundTint="@color/Morado"
-        android:text="Registrarse"
+        android:text="@string/registrar_se"
         android:textColor="@color/black"
         app:circularflow_defaultRadius="50dp"
         app:circularflow_radiusInDP="50dp"

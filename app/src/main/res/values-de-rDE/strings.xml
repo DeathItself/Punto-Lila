@@ -33,4 +33,7 @@
     <string name="formulari">Sende Formular</string>
     <string name="textFormulari">Um ein Aktivist zu werden, müssen Sie ein Formular ausfüllen, indem Sie auf die folgende Schaltfläche klicken</string>
     <string name="Nombre_Usuario">Nutzername</string>
+    <string name="AjustesUsu">Benutzereinstellungen</string>
+    <string name="botonLila">Website Punkt Lila</string>
+    <string name="puntoLilaText">Die Purple Points sollen informieren, sensibilisieren, anprangern und Protokolle angesichts von sexistischer und LGBTI-phobischer Gewalt und Aggression aktivieren, die im öffentlichen Raum, sei es in der Freizeit oder bei Feierlichkeiten, sowie in anderen Räumen von öffentlichem Interesse (Bildungs-, Sport, Handel, Gesundheitswesen usw.)</string>
 </resources>

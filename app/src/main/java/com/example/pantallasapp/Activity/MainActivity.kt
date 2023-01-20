@@ -20,12 +20,14 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 
+
 class MainActivity : AppCompatActivity() {
 
 
     private lateinit var auth: FirebaseAuth
 
     lateinit var binding: ActivityMainBinding
+
 
 
     companion object {
@@ -65,12 +67,6 @@ class MainActivity : AppCompatActivity() {
                 Toast.makeText(applicationContext, "click on recursos", Toast.LENGTH_LONG).show()
                 navController.navigate(R.id.action_global_fragment_recursos)
                 supportActionBar!!.title = "Recursos"
-                return true
-            }
-            R.id.puntos_lila -> {
-                Toast.makeText(applicationContext, "click on puntos lila", Toast.LENGTH_LONG).show()
-                navController.navigate(R.id.action_global_fragment_puntoslila)
-                supportActionBar!!.title = "Puntos Lila"
                 return true
             }
             R.id.activista -> {

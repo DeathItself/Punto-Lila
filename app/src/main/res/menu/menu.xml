@@ -9,9 +9,6 @@
         android:id="@+id/recursos"
         android:title="@string/Recursos" />
     <item
-        android:id="@+id/puntos_lila"
-        android:title="@string/PuntosLila" />
-    <item
         android:id="@+id/activista"
         android:title="@string/activista" />
     <item

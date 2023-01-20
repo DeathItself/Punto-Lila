@@ -33,4 +33,7 @@
     <string name="formulari">Envoyer le formulaire</string>
     <string name="textFormulari">Pour devenir militant, vous devrez remplir un formulaire en appuyant sur le bouton suivant</string>
     <string name="Nombre_Usuario">Nom d\'utilisateur</string>
+    <string name="CerrarSesion">Fermer la session</string>
+    <string name="botonLila">Site Internet Point Lila</string>
+    <string name="puntoLilaText">Les Points Violets sont destinés à informer, sensibiliser, dénoncer et activer des protocoles face aux violences et agressions sexistes et LGBTI-phobes qui surviennent dans les espaces publics, qu\'ils soient de loisirs ou festifs, ainsi que d\'autres espaces d\'intérêt public (éducatifs, sport, commerce, santé, etc.)</string>
 </resources>

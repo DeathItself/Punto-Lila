@@ -54,8 +54,6 @@ class ListAdapter: RecyclerView.Adapter<ListAdapter.ListViewHolder>(){
                 editor.putString("eventosApuntado", item.eventName)
                 editor.apply()
 
-                val direction = Fragment_eventosDirections.actionFragmentEventosToFragmentMisEventos(eventosApuntado = item.eventName.toString())
-                holder.itemView.findNavController().navigate(direction)
 
             }
         }
