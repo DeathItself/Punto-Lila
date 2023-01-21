@@ -6,7 +6,7 @@
     app:startDestination="@id/fragment_eventos">
     <fragment
         android:id="@+id/fragment_eventos"
-        android:name="com.example.pantallasapp.Fragments.FragmentEventos"
+        android:name="com.copernic.PuntLila.Fragments.FragmentEventos"
         android:label="fragment_eventos"
         tools:layout="@layout/fragment_eventos" >
         <action
@@ -15,19 +15,19 @@
     </fragment>
     <fragment
         android:id="@+id/fragment_recursos"
-        android:name="com.example.pantallasapp.Fragments.fragment_recursos"
+        android:name="com.copernic.PuntLila.Fragments.fragment_recursos"
         android:label="fragment_recursos"
         tools:layout="@layout/fragment_recursos" />
 
     <fragment
         android:id="@+id/fragment_solicitud_activista2"
-        android:name="com.example.pantallasapp.Fragments.FragmentSolicitudActivista"
+        android:name="com.copernic.PuntLila.Fragments.FragmentSolicitudActivista"
         android:label="fragment_solicitud_activista"
         tools:layout="@layout/fragment_solicitud_activista" />
 
     <fragment
         android:id="@+id/fragment_mis_eventos"
-        android:name="com.example.pantallasapp.Fragments.FragmentMisEventos"
+        android:name="com.copernic.PuntLila.Fragments.FragmentMisEventos"
         android:label="fragment_Mis_Eventos"
         tools:layout="@layout/fragment_mis_eventos">
     <argument

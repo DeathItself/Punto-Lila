@@ -1,4 +1,4 @@
-package com.example.pantallasapp.models
+package com.copernic.PuntLila.models
 
 data class Chat(
     var id: String = "",

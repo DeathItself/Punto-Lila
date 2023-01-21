@@ -1,4 +1,4 @@
-package com.example.pantallasapp.Activity
+package com.copernic.PuntLila.Activity
 
 import android.content.Intent
 import android.os.Bundle
@@ -10,8 +10,8 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
-import com.example.pantallasapp.R
-import com.example.pantallasapp.databinding.RecupPasswActivityBinding
+import com.copernic.PuntLila.R
+import com.copernic.PuntLila.databinding.RecupPasswActivityBinding
 import com.google.firebase.auth.FirebaseAuth
 
 class RecupPsw : AppCompatActivity() {

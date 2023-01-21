@@ -1,11 +1,11 @@
-package com.example.pantallasapp.Activity
+package com.copernic.PuntLila.Activity
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
-import com.example.pantallasapp.databinding.ActivityRegistroBinding
+import com.copernic.PuntLila.databinding.ActivityRegistroBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.auth.ktx.userProfileChangeRequest

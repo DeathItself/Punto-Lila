@@ -1,4 +1,4 @@
-package com.example.pantallasapp.Fragments
+package com.copernic.PuntLila.Fragments
 
 import android.annotation.SuppressLint
 import android.os.Bundle
@@ -9,11 +9,10 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.pantallasapp.Adapters.ListAdapter
-import com.example.pantallasapp.R
-import com.example.pantallasapp.databinding.FragmentEventosBinding
+import com.copernic.PuntLila.Adapters.ListAdapter
+import com.copernic.PuntLila.R
+import com.copernic.PuntLila.databinding.FragmentEventosBinding
 import com.google.firebase.firestore.ktx.firestore
-import com.google.firebase.firestore.ktx.toObject
 import com.google.firebase.ktx.Firebase
 
 class FragmentEventos : Fragment() {

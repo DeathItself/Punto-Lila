@@ -1,4 +1,4 @@
-package com.example.pantallasapp.Activity
+package com.copernic.PuntLila.Activity
 
 
 import android.app.NotificationChannel
@@ -14,8 +14,8 @@ import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
-import com.example.pantallasapp.R
-import com.example.pantallasapp.databinding.ActivityMainBinding
+import com.copernic.PuntLila.R
+import com.copernic.PuntLila.databinding.ActivityMainBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase

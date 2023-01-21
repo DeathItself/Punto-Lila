@@ -1,4 +1,4 @@
-package com.example.pantallasapp.Activity
+package com.copernic.PuntLila.Activity
 
 import android.content.Context
 import android.content.Intent
@@ -9,7 +9,7 @@ import android.util.Log
 import android.view.View
 import android.widget.EditText
 import android.widget.Toast
-import com.example.pantallasapp.R
+import com.copernic.PuntLila.R
 import com.google.firebase.auth.FirebaseAuth
 import kotlin.properties.Delegates
 

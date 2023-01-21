@@ -1,4 +1,4 @@
-package com.example.pantallasapp.Fragments
+package com.copernic.PuntLila.Fragments
 
 
 import android.content.Intent
@@ -8,7 +8,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.pantallasapp.databinding.FragmentRecursosBinding
+import com.copernic.PuntLila.databinding.FragmentRecursosBinding
 
 
 class fragment_recursos : Fragment() {

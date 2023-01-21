@@ -1,4 +1,4 @@
-package com.example.pantallasapp
+package com.copernic.PuntLila
 
 import org.junit.Test
 
