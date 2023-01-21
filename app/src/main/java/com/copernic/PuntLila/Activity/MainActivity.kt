@@ -1,4 +1,4 @@
-package com.example.pantallasapp.Activity
+package com.copernic.PuntLila.Activity
 
 
 import android.app.NotificationChannel
@@ -14,11 +14,12 @@ import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
-import com.example.pantallasapp.R
-import com.example.pantallasapp.databinding.ActivityMainBinding
+import com.copernic.PuntLila.R
+import com.copernic.PuntLila.databinding.ActivityMainBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -26,6 +27,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var auth: FirebaseAuth
 
     lateinit var binding: ActivityMainBinding
+
 
 
     companion object {
@@ -65,12 +67,6 @@ class MainActivity : AppCompatActivity() {
                 Toast.makeText(applicationContext, "click on recursos", Toast.LENGTH_LONG).show()
                 navController.navigate(R.id.action_global_fragment_recursos)
                 supportActionBar!!.title = "Recursos"
-                return true
-            }
-            R.id.puntos_lila -> {
-                Toast.makeText(applicationContext, "click on puntos lila", Toast.LENGTH_LONG).show()
-                navController.navigate(R.id.action_global_fragment_puntoslila)
-                supportActionBar!!.title = "Puntos Lila"
                 return true
             }
             R.id.activista -> {

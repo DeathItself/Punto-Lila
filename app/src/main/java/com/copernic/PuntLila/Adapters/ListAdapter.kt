@@ -1,4 +1,4 @@
-package com.example.pantallasapp.Adapters
+package com.copernic.PuntLila.Adapters
 
 import android.content.Context
 import android.content.Intent
@@ -6,11 +6,10 @@ import android.net.Uri
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.Toast
-import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
-import com.example.pantallasapp.Fragments.FragmentEventos
-import com.example.pantallasapp.databinding.ListEventosBinding
+import com.copernic.PuntLila.Fragments.FragmentEventos
+import com.copernic.PuntLila.databinding.ListEventosBinding
 
 class ListAdapter: RecyclerView.Adapter<ListAdapter.ListViewHolder>(){
     var lista:MutableList<FragmentEventos.ListaMenu> = ArrayList()
@@ -54,8 +53,6 @@ class ListAdapter: RecyclerView.Adapter<ListAdapter.ListViewHolder>(){
                 editor.putString("eventosApuntado", item.eventName)
                 editor.apply()
 
-                val direction = Fragment_eventosDirections.actionFragmentEventosToFragmentMisEventos(eventosApuntado = item.eventName.toString())
-                holder.itemView.findNavController().navigate(direction)
 
             }
         }

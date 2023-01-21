@@ -1,4 +1,4 @@
-package com.example.pantallasapp.models
+package com.copernic.PuntLila.models
 
 import java.util.*
 
