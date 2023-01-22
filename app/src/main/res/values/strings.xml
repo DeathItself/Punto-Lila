@@ -34,5 +34,6 @@
     <string name="textFormulari">Per fer-te activista, hauràs d\'omplir un formulari prement el botó següent</string>
     <string name="botonLila">Web Punt Lila</string>
     <string name="puntoLilaText">Els Punts Liles estan destinats a informar, sensibilitzar, denunciar i activar protocols davant de violències i agressions masclistes i LGTBI-fòbiques que es produeixin en espais públics, ja sigui de lleure i festius, com altres espais d\'interès públic (educatius, esportius, comercials, sanitaris, etc.)</string>
-    <string name="AjustesUsu">Ajustos Usuari</string>
+    <string name="AjustesUsu">Configuració Usuari</string>
+    <string name="Chat">Xat</string>
 </resources>

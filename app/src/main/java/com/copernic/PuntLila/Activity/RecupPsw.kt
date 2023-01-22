@@ -18,7 +18,8 @@ class RecupPsw : AppCompatActivity() {
     private var etEmail: EditText? = null
     private var btnSend: Button? = null
 
-    //Firebase references
+
+    //Inicializar FirebaseAuth
     private var mAuth: FirebaseAuth? = null
     lateinit var binding: RecupPasswActivityBinding
 
@@ -31,12 +32,14 @@ class RecupPsw : AppCompatActivity() {
 
     }
 
+    // Inicializar los elementos de la vista
     private fun initialise() {
         etEmail = findViewById<View>(R.id.RecuperarCorreo) as EditText
         btnSend = findViewById<View>(R.id.RecuperarCuenta) as Button
         mAuth = FirebaseAuth.getInstance()
         btnSend!!.setOnClickListener {
             sendPasswordResetEmail()
+            // Crear una notificación cuando se envía el correo
             val builder = NotificationCompat.Builder(this, MainActivity.CHANNEL_ID).also {
                 it.setSmallIcon(R.drawable.splash)
                 it.setContentTitle(getString(R.string.channel_name))
@@ -49,6 +52,7 @@ class RecupPsw : AppCompatActivity() {
         }
     }
 
+    // Función para enviar el correo para restablecer la contraseña
     private fun sendPasswordResetEmail() {
         val email = etEmail?.text.toString()
         if (!TextUtils.isEmpty(email)) {
@@ -71,6 +75,7 @@ class RecupPsw : AppCompatActivity() {
         }
     }
 
+    // Ir a la pantalla de inicio de sesión después de enviar el correo
     private fun goMain() {
         val intent = Intent(this, LoginActivity::class.java)
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
