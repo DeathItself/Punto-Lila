@@ -41,7 +41,7 @@ class RecupPsw : AppCompatActivity() {
             sendPasswordResetEmail()
             // Crear una notificación cuando se envía el correo
             val builder = NotificationCompat.Builder(this, MainActivity.CHANNEL_ID).also {
-                it.setSmallIcon(R.drawable.ic_app)
+                it.setSmallIcon(R.drawable.splash)
                 it.setContentTitle(getString(R.string.channel_name))
                 it.setContentText(getString(R.string.channel_description))
                 it.setPriority(NotificationCompat.PRIORITY_HIGH)
