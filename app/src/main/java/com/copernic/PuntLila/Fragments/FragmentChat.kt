@@ -1,21 +1,26 @@
 package com.copernic.PuntLila.Fragments
 
+import android.app.NotificationChannel
+import android.app.NotificationManager
+import android.content.Context
+import android.os.Build
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
+import androidx.core.app.NotificationCompat
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.copernic.PuntLila.Adapters.MessageAdapter
 import com.copernic.PuntLila.Models.Message
 import com.copernic.PuntLila.R
+import com.google.firebase.firestore.DocumentChange
 import com.google.firebase.firestore.Query
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
-
 
 
 class FragmentChat : Fragment() {
@@ -58,28 +63,50 @@ class FragmentChat : Fragment() {
 
         sendMessageButton.setOnClickListener { sendMessage() } //Agrega un listener al botón para enviar un mensaje
 
-        val chatRef = db.collection("chats").document(chatId) //Referencia a la colección de chats en Firestore
-
-        chatRef.collection("messages").orderBy("dob", Query.Direction.ASCENDING)
-            .get()
-            .addOnSuccessListener { messages ->
-                // Se obtienen los mensajes en una lista de objetos de tipo Message
-                val listMessages = messages.toObjects(Message::class.java)
-                // Se establecen los mensajes obtenidos en el adaptador del RecyclerView
-                (messagesRecylerView.adapter as MessageAdapter).setData(listMessages)
-            }
-        // Se agrega un listener para escuchar los cambios en la colección de mensajes
+        val chatRef = db.collection("chats").document(chatId)
         chatRef.collection("messages").orderBy("dob", Query.Direction.ASCENDING)
             .addSnapshotListener { messages, error ->
-                // Si no hay error, se actualizan los mensajes en el adaptador
                 if (error == null) {
                     messages?.let {
                         val listMessages = it.toObjects(Message::class.java)
                         (messagesRecylerView.adapter as MessageAdapter).setData(listMessages)
+                        if (it.documentChanges.size > 0) {
+                            // Verifica si se agregó un nuevo mensaje
+                            for (change in it.documentChanges) {
+                                if (change.type == DocumentChange.Type.ADDED) {
+                                    // Mostrar notificación
+                                    showNotification(
+                                        "Nuevo mensaje",
+                                        "Tienes un nuevo mensaje en este chat."
+                                    )
+                                }
+                            }
+                        }
                     }
                 }
             }
     }
+
+    private fun showNotification(title: String, message: String) {
+        val notificationManager =
+            requireContext().getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
+        val notificationId = 1
+        val channelId = "channel-01"
+        val channelName = "Chat Channel"
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            val channel =
+                NotificationChannel(channelId, channelName, NotificationManager.IMPORTANCE_HIGH)
+            notificationManager.createNotificationChannel(channel)
+        }
+        val notification = NotificationCompat.Builder(requireContext(), channelId)
+            .setSmallIcon(R.drawable.ic_notifications_black_24dp)
+            .setContentTitle(title)
+            .setContentText(message)
+            .setAutoCancel(true)
+            .build()
+        notificationManager.notify(notificationId, notification)
+    }
+
 
     //Función que se encarga de enviar un mensaje al chat
     private fun sendMessage() {
