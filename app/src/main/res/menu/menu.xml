@@ -6,6 +6,9 @@
         android:id="@+id/eventos"
         android:title="@string/Eventos" />
     <item
+        android:id="@+id/puntos_lila"
+        android:title="@string/Chat" />
+    <item
         android:id="@+id/recursos"
         android:title="@string/Recursos" />
     <item
