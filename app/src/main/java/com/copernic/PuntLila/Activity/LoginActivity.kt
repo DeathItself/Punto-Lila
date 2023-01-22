@@ -15,8 +15,6 @@ import kotlin.properties.Delegates
 
 class LoginActivity : AppCompatActivity() {
 
-    private val TAG = "LoginActivity"
-
     private var email by Delegates.notNull<String>()
     private var password by Delegates.notNull<String>()
     private lateinit var etEmail: EditText
@@ -31,39 +29,30 @@ class LoginActivity : AppCompatActivity() {
         initialise()
     }
 
-    /*Creamos un método para inicializar nuestros elementos del diseño y la autenticación de firebase*/
+    // Inicializa la vista de la actividad de inicio de sesión
     private fun initialise() {
-        etEmail = findViewById(R.id.correoId)
-        etPassword = findViewById(R.id.contraId)
-        mAuth = FirebaseAuth.getInstance()
-        val prefs = getSharedPreferences(MainActivity.PREF_NAME, Context.MODE_PRIVATE)
-        val mailstr = prefs.getString("emailusuario","")
-        etEmail.setText(mailstr)
+        etEmail = findViewById(R.id.correoId) //Asigna el EditText para el correo
+        etPassword = findViewById(R.id.contraId) //Asigna el EditText para la contraseña
+        mAuth = FirebaseAuth.getInstance() //Inicializa la instancia de FirebaseAuth
+        val prefs = getSharedPreferences(
+            MainActivity.PREF_NAME,
+            Context.MODE_PRIVATE
+        ) //obtiene el valor guardado en las preferencias
+        val mailstr = prefs.getString("emailusuario", "") //asigna el valor obtenido a una variable
+        etEmail.setText(mailstr) //coloca el valor en el EditText del correo
     }
 
-//Ahora vamos a Iniciar sesión con firebase
-
+    // Inicia sesión con el correo y la contraseña ingresados
     private fun loginUser() {
-        //Obtenemos usuario y contraseña
         email = etEmail.text.toString()
-
-
         password = etPassword.text.toString()
-        //Verificamos que los campos no este vacios
+//verifica que los campos no estén vacíos
         if (!TextUtils.isEmpty(email) && !TextUtils.isEmpty(password)) {
-            Log.d("LoginActivity", "Antes de signin")
-            //Iniciamos sesión con el método signIn y enviamos usuario y contraseña
             mAuth.signInWithEmailAndPassword(email, password)
-                .addOnCompleteListener(this) {
-
-                    //Verificamos que la tarea se ejecutó correctamente
-                        task ->
+                .addOnCompleteListener(this) { task ->
                     if (task.isSuccessful) {
-                        Log.d("LoginActivity", "Logged")
-                        // Si se inició correctamente la sesión vamos a la vista Home de la aplicación
-                        goHome() // Creamos nuestro método en la parte de abajo
+                        goHome()
                     } else {
-                        // sino le avisamos el usuairo que orcurrio un problema
                         Toast.makeText(
                             this, "Error en auntentificación.",
                             Toast.LENGTH_SHORT
@@ -75,32 +64,23 @@ class LoginActivity : AppCompatActivity() {
         }
     }
 
-
+    //Navega a la actividad principal
     private fun goHome() {
         val intent = Intent(this, MainActivity::class.java)
         startActivity(intent)
     }
 
-/* Tenemos que crear nuestros métodos con el mismo nombre que le agregamos a nuestros botones en el atributo onclick y forzosamente tenemos que recibir un parámetro view para que sea reconocido como click de nuestro button ya que en view podemos modificar los atributos*/
-
-    /*Primero creamos nuestro evento login dentro de este llamamos nuestro método loginUser al dar click en el botón se iniciara sesión */
-    fun login(view: View) {
+    fun login(view: View) { //Función para iniciar sesión al presionar el botón
         loginUser()
     }
 
-/*Si se olvido de la contraseña lo enviaremos en la siguiente actividad*/
-
-    fun fpswrec(view: View) {
+    fun fpswrec(view: View) { //Función para navegar a la actividad de recuperación de contraseña al presionar el botón
         intent = Intent(this, RecupPsw::class.java)
         startActivity(intent)
     }
 
-/*Si quiere registrarse lo enviaremos en la siguiente actividad*/
-
-    fun register(view: View) {
+    fun register(view: View) { //Función para navegar a la actividad de registro al presionar el botón
         intent = Intent(this, Registro::class.java)
         startActivity(intent)
-
-
     }
 }
