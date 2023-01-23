@@ -33,4 +33,8 @@
     <string name="formulari">Enviar el formulario</string>
     <string name="textFormulari">Para poder ser activista, tendrás que rellenar un formulario pulsando el siguiente botón</string>
     <string name="Nombre_Usuario">Nombre de usuario</string>
+    <string name="CerrarSesion">Cerrar Sesion</string>
+    <string name="botonLila">Web Punt Lila</string>
+    <string name="puntoLilaText">Los Puntos Lilas están destinados a informar, sensibilizar, denunciar y activar protocolos ante violencias y agresiones machistas y LGTBI-fóbicas que se produzcan en espacios públicos, ya sea de ocio y festivos, como otros espacios de interés público (educativos, deportivos, comerciales, sanitarios, etc.)</string>
+    <string name="Chat">Chat</string>
 </resources>
