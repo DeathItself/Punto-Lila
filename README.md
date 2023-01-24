@@ -3,15 +3,25 @@
 
 
 
-<h3 align="left">Screenshots:</h3>
-<p align="left">
-</p>
+
+<h1>Screenshots</h1>
+<div>
+  <img src="https://i.ibb.co/Ctg79Cc/Screenshot-20230124-232624.png" alt="Screenshot-20230124-232624" width="200" height="350">
+  <img src="https://i.ibb.co/k27cry7/Screenshot-20230124-232636.png" alt="Screenshot-20230124-232636"width="200" height="350">
+  <img src="https://i.ibb.co/Ksbn9QJ/Screenshot-20230124-232643.png" alt="Screenshot-20230124-232643"width="200" height="350">
+  <img src="https://i.ibb.co/VC58qNp/Screenshot-20230124-232705.png" alt="Screenshot-20230124-232705"width="200" height="350">
+  <img src=https://i.ibb.co/bsXbZ8F/Screenshot-20230124-232711.png" alt="Screenshot-20230124-232711"width="200" height="350">
+  <img src=https://i.ibb.co/87NkFnL/Screenshot-20230124-232717.png" alt="Screenshot-20230124-232717"width="200" height="350">
+  <img src="https://i.ibb.co/QdhXLng/Screenshot-20230124-232722.png" alt="Screenshot-20230124-232722"width="200" height="350">
+  <img src="https://i.ibb.co/9gjC3jj/Screenshot-20230124-232727.png" alt="Screenshot-20230124-232727"width="200" height="350">
+</div>
 
 
-<a href="https://play.google.com/store/apps/details?id=com.copernic.PuntLila&hl=es" target="_blank" rel="noreferrer"><h3 align="left">Download de the app</h3>
-<p align="left"> </a>
-</p>
 
-<a href="https://docs.google.com/document/d/1O4aktsYYhupKyzTKivoCiaAsOm7AKD0xkDOH49EDP5o/edit?usp=sharing" target="_blank" rel="noreferrer"><h3 align="left">The project documentation</h3>
-<p align="left"> </a>
-</p>
+
+<h1>The project documentation</h1>
+<a href="https://docs.google.com/document/d/1O4aktsYYhupKyzTKivoCiaAsOm7AKD0xkDOH49EDP5o/edit?usp=sharing">https://docs.google.com/document/d/1O4aktsYYhupKyzTKivoCiaAsOm7AKD0xkDOH49EDP5o/edit?usp=sharing</a>
+
+
+<h1>Download the app</h1>
+<a href="https://play.google.com/store/apps/details?id=com.copernic.PuntLila&hl=es">https://play.google.com/store/apps/details?id=com.copernic.PuntLila&hl=es</a>
